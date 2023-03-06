@@ -18,6 +18,7 @@ use App\Http\Controllers\PesanNavController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+//admin
 
 Route::get('/', function () {
     return view('admin.beranda.index');
@@ -64,3 +65,8 @@ Route::get('/deletnotif/{id}',[NotifikasiController::class,'deletnotif']);
 Route::get('/delete/{id}',[PenggunaController::class,'delete'])->name('delete');
 Route::get('/destroy/{id}',[PenggunaController::class,'destroy'])->name('destroy');
 Route::get('/hps/{id}',[PesananController::class,'hps'])->name('hps');
+
+
+
+//admin_travel
+
