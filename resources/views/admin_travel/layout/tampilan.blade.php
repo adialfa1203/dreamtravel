@@ -81,6 +81,8 @@
     
     <!-- app JavaScript -->
     <script src="{{ asset ('E5 (1)\E5/templates.iqonic.design/lite/posdash/html/assets/js/app.js')}}"></script>
+
+
   </body>
 
 <!-- Mirrored from templates.iqonic.design/lite/posdash/html/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 16 Feb 2023 02:59:20 GMT -->

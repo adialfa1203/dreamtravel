@@ -1,4 +1,4 @@
-@extends('layout.tampilan')
+@extends('admin_travel.layout.tampilan')
 @section('/detail_tujuan','active')
 @section('content')
 <div class="container-fluid">

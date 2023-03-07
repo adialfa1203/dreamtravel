@@ -1,4 +1,4 @@
-@extends('layout.tampilan')
+@extends('admin_travel.layout.tampilan')
 @section('/detail_harga','active')
 @section('content')
 
