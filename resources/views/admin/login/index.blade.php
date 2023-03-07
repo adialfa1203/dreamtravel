@@ -18,6 +18,8 @@
       <link rel="stylesheet" href="../assets/vendor/line-awesome/dist/line-awesome/css/line-awesome.min.css">
       <link rel="stylesheet" href="../assets/vendor/remixicon/fonts/remixicon.css">  </head>
   <body class=" ">
+   <form action="login" method="post" >
+      @csrf
     <!-- loader Start -->
     <div id="loading">
           <div id="loading-center">
@@ -41,13 +43,18 @@
                                     <div class="row">
                                        <div class="col-lg-12">
                                           <div class="floating-label form-group">
-                                             <input class="floating-input form-control" type="email" placeholder=" ">
+                                             <input type="email" name="email" id="typeEmailX-2" class="form-control form-control-lg @error('email') is-invalid @enderror" autofocus required value="{{ old('email') }}" />
                                              <label>Email</label>
+                                             @error('email')
+                                             <div class="div invalid-feedback">
+                                                Email Wajib diisi dengan benar
+                                             </div>
+                                     @enderror
                                           </div>
                                        </div>
                                        <div class="col-lg-12">
                                           <div class="floating-label form-group">
-                                             <input class="floating-input form-control" type="password" placeholder=" ">
+                                             <input type="password" name="password" id="typePasswordX-2" class="form-control form-control-lg" required/>
                                              <label>Password</label>
                                           </div>
                                        </div>

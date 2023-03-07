@@ -16,7 +16,7 @@ class DetailController extends Controller
     }
 
     public function dataa($id){
-        $data = pemilik::where('travel',$id)->get();
+        $data = detail::where('travel',$id)->with('pemilik')->get();
         // dd($data);
 
         return view('admin.pemiliktravel.dataa', compact('data'));

@@ -18,7 +18,7 @@
       <link rel="stylesheet" href="../assets/vendor/line-awesome/dist/line-awesome/css/line-awesome.min.css">
       <link rel="stylesheet" href="../assets/vendor/remixicon/fonts/remixicon.css">  </head>
   <body class=" ">
-   <form action="{{url('beranda')}}" method="post" >
+   <form class="mx-1 mx-md-4" action="beranda" method="POST">
       @csrf
     <!-- loader Start -->
     <div id="loading">
@@ -43,8 +43,10 @@
                                     <div class="row">
                                        <div class="col-lg-6">
                                           <div class="floating-label form-group">
-                                             <input class="floating-input form-control" type="text" placeholder=" ">
-                                             <label>Nama Panjang</label>
+                                             <input type="text" name="name" id="form3Example1c" placeholder="Nama" class="form-control @error('name') is-invalid @enderror" required value="{{ old('name') }}"/>
+                                             <label>Nama</label>
+                                             @error('name')
+                                             <div class="invalid-feedback">Nama Wajib diisi dengan benar (Kalimat tidak boleh kurang dari 3 angka)</div> @enderror
                                           </div>
                                        </div>
                                        <!-- <div class="col-lg-6">
@@ -55,8 +57,10 @@
                                        </div> -->
                                        <div class="col-lg-6">
                                           <div class="floating-label form-group">
-                                             <input class="floating-input form-control" type="email" placeholder=" ">
+                                             <input type="email" name="email" placeholder="Email" id="form3Example3c" class="form-control @error('email') is-invalid @enderror" required value="{{ old('email') }}"/>
                                              <label>Email</label>
+                                             @error('email')
+                                             <div class="invalid-feedback">Email Wajib diisi dengan benar</div> @enderror
                                           </div>
                                        </div>
                                        <div class="col-lg-6">
@@ -67,8 +71,10 @@
                                        </div>
                                        <div class="col-lg-6">
                                           <div class="floating-label form-group">
-                                             <input class="floating-input form-control" type="password" placeholder=" ">
+                                             <input type="password" name="password" placeholder="Password" id="form3Example4c" class="form-control @error('password') is-invalid @enderror" requiredx/>
                                              <label>Password</label>
+                                             @error('password')
+                                             <div class="invalid-feedback">Password wajib diisi</div> @enderror
                                           </div>
                                        </div>
                                        <!-- <div class="col-lg-6">

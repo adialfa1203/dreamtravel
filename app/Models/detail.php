@@ -9,10 +9,10 @@ class detail extends Model
 {
     use HasFactory;
     protected $fillable = ['noplat','nama_kendaraan','kategori_kendararaan','foto_kendaraan'];
-    protected $table = 'pengguna';
+    protected $table = 'detail';
     public $timestamps = false;
 
     public function pemilik(){
-        return $this->belongsTo(pemilik::class);
+        return $this->belongsTo(pemilik::class, 'travel');
     }
 }

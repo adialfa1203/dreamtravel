@@ -381,8 +381,8 @@
 
                             <td>
                                 <div class="d-flex align-items-center list-action">
-                                    <a class="badge bg-warning mr-2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"
-                                        href="{{ url('/hps/'.$item->id)}}"><i class="ri-delete-bin-line mr-0"></i></a>
+                                    <a class="badge bg-warning mr-2 border-0 delete" data-id="{{ $item->id }}" data-nama="{{ $item->nama }}" data-toggle="tooltip" data-placement="top" data-bs-target="modal" title="" data-original-title="Hapus"
+                                        href="#"><i class="ri-delete-bin-line mr-0"></i></a>
                                 </div>
                             </td>
                         </tr>
@@ -447,7 +447,39 @@
     
     <!-- app JavaScript -->
     <script src="../assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.slim.js" integrity="sha256-DKU1CmJ8kBuEwumaLuh9Tl/6ZB6jzGOBV/5YpNE2BWc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
+            <script>
+                $('.delete').click(function(){
+                    var pesanid = $(this).attr('data-id');
+                    var nama = $(this).attr('data-nama');
 
+                    
+                    Swal.fire({
+                    title: 'Apakah anda yakin?',
+                    text: "Anda tidak akan dapat mengembalikan data "+nama+"!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Ya, Hapus!'
+                    }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location = "/hps/"+pesanid+""
+                        Swal.fire(
+                        'Dihapus!',
+                        'Data Anda telah dihapus.',
+                        'success'
+                        )
+                    }
+                    });
+                });
+
+
+
+                    
+            </script>
 <!-- Mirrored from templates.iqonic.design/lite/posdash/html/backend/page-list-returns.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 16 Feb 2023 02:59:21 GMT -->
 </html>

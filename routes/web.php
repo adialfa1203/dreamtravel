@@ -1,12 +1,14 @@
 <?php
 
 use App\Http\Controllers\DetailController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\NotifikasiController;
 use App\Http\Controllers\PemilikController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PenggunaController;
 use App\Http\Controllers\PesananController;
 use App\Http\Controllers\PesanNavController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +24,19 @@ use App\Http\Controllers\PesanNavController;
 Route::get('/', function () {
     return view('admin.beranda.index');
 });
+//login
+Route::get('login', function () {
+    return view('admin.login.index');
+});
+Route::get('login',[LoginController::class,'index'])->middleware('guest')->name('login');
+Route::post('login',[LoginController::class,'authenticate']);
 
+//register
+Route::get('register', function () {
+    return view('admin.register.index');
+});
+Route::get('/register',[RegisterController::class,'index']);
+Route::post('/register',[RegisterController::class,'store']);
 
 Route::get('pengguna', function () {
     return view('admin.pengguna.index');
@@ -52,7 +66,7 @@ Route::get('notif', function () {
 
 Route::get('pemilik',[PemilikController::class,'index']);
 Route::get('pengguna',[PenggunaController::class,'index']);
-Route::get('/detail/{id}',[DetailController::class,'index']); //detailcontroller
+// Route::get('/detail/{id}',[DetailController::class,'index']); //detailcontroller
 Route::get('pesanan',[PesananController::class,'index']);
 Route::get('pesannav',[PesanNavController::class,'index']);
 Route::get('/deletpesan/{id}',[PesanNavController::class,'deletpesan']);

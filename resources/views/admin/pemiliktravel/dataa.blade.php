@@ -363,7 +363,7 @@
                             
                         <tr>
                             {{-- <td>{{ $loop->iteration }}</td> --}}
-                            <td>{{ $data->travel }} </td>
+                            <td>{{ $data->pemilik->travel }} </td>
                             <td>{{ $data->noplat }}</td>
                             <td>{{ $data->nama_kendaraan }}</td>
                             <td>{{ $data->kategori_kendaraan}}</td>
