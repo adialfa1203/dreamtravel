@@ -18,7 +18,7 @@
       <link rel="stylesheet" href="../assets/vendor/line-awesome/dist/line-awesome/css/line-awesome.min.css">
       <link rel="stylesheet" href="../assets/vendor/remixicon/fonts/remixicon.css">  </head>
   <body class=" ">
-   <form class="mx-1 mx-md-4" action="beranda" method="POST">
+   <form class="mx-1 mx-md-4" action="" method="POST">
       @csrf
     <!-- loader Start -->
     <div id="loading">
@@ -75,6 +75,14 @@
                                              <label>Password</label>
                                              @error('password')
                                              <div class="invalid-feedback">Password wajib diisi</div> @enderror
+                                          </div>
+                                       </div>
+                                       <div class="col-lg-6">
+                                          <div class="floating-label form-group">
+                                             <input type="password" name="password" placeholder="Password" id="form3Example4c" class="form-control @error('password') is-invalid @enderror" requiredx/>
+                                             <label>Tanggal Lahir</label>
+                                             @error('password')
+                                             <div class="invalid-feedback">Tanggal Lahir Wajib Diisi</div> @enderror
                                           </div>
                                        </div>
                                        <!-- <div class="col-lg-6">

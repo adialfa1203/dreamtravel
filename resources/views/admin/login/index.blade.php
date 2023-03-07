@@ -18,7 +18,7 @@
       <link rel="stylesheet" href="../assets/vendor/line-awesome/dist/line-awesome/css/line-awesome.min.css">
       <link rel="stylesheet" href="../assets/vendor/remixicon/fonts/remixicon.css">  </head>
   <body class=" ">
-   <form action="login" method="post" >
+   <form action="login"  method="post" >
       @csrf
     <!-- loader Start -->
     <div id="loading">
