@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PenggunaController;
 use App\Http\Controllers\PesananController;
 use App\Http\Controllers\PesanNavController;
+use App\Http\Controllers\BerandaTravelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -69,4 +70,5 @@ Route::get('/hps/{id}',[PesananController::class,'hps'])->name('hps');
 
 
 //admin_travel
+Route::get('beranda_travel',[BerandaTravelController::class,'beranda_travel'])->name('beranda_travel');
 

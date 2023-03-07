@@ -35,7 +35,7 @@
     <!-- Wrapper Start -->
     <div class="wrapper">
       
-        @include('layout.sidebar')
+        @include('admin_travel.layout.sidebar')
       <div class="modal fade" id="new-order" tabindex="-1" role="dialog" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
