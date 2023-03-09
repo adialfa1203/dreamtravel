@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PenggunaController;
 use App\Http\Controllers\PesananController;
 use App\Http\Controllers\PesanNavController;
+use App\Http\Controllers\PenggunaWebController;
 
 //admin travel
 use App\Http\Controllers\BerandaTravelController;
@@ -60,6 +61,12 @@ Route::get('semuanotif', function () {
 Route::get('notif', function () {
     return view('admin.notifikasi.index');
 });
+Route::get('penggunaweb', function () {
+    return view('users.beranda.index');
+});
+Route::get('hasilpencarian', function () {
+    return view('users.hasilpencarian.indexhasilpencarian');
+});
 
 Route::get('pemilik',[PemilikController::class,'index']);
 Route::get('pengguna',[PenggunaController::class,'index']);
@@ -76,6 +83,7 @@ Route::get('/delete/{id}',[PenggunaController::class,'delete'])->name('delete');
 Route::get('/destroy/{id}',[PenggunaController::class,'destroy'])->name('destroy');
 Route::get('/hps/{id}',[PesananController::class,'hps'])->name('hps');
 
+<<<<<<< Updated upstream
 
 
 //admin_travel
@@ -101,3 +109,15 @@ Route::get('kategori',[KategoriController::class, 'kategori'])->name('kategori')
 
 //tambah
 Route::get('tambah',[TambahController::class, 'tambah'])->name('tambah');
+=======
+Route::get('hasilpencarian',[PenggunaWebController::class,'indexhasilpencarian']);
+Route::get('detailkendaraan', [PenggunaWebController::class, 'indexdetailkendaraan']);
+Route::get('faq', [PenggunaWebController::class, 'indexfaq']);
+Route::get('detailtravel', [PenggunaWebController::class, 'indexdetailtravel']);
+Route::get('kontak', [PenggunaWebController::class, 'indexkontak']);
+Route::get('pesan', [PenggunaWebController::class, 'indexpesan']);
+Route::get('profile', [PenggunaWebController::class, 'indexprofile']);
+// Route::get('proff', [PenggunaWebController::class, 'proff']);
+Route::get('tentangkami', [PenggunaWebController::class, 'indextentangkami']);
+Route::get('beranda', [PenggunaWebController::class, 'index']);
+>>>>>>> Stashed changes
