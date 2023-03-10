@@ -53,7 +53,7 @@
                                              <div class="div invalid-feedback">
                                                 Email Wajib diisi dengan benar
                                              </div>
-                                     @enderror
+                                              @enderror
                                           </div>
                                        </div>
                                        <div class="col-lg-12">

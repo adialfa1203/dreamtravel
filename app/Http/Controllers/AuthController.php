@@ -56,41 +56,40 @@ class  AuthController extends Controller
         Session::flash('message', 'Email/Password Yang Anda Masukkan Salah');
         return redirect('/login');
     }
-    // public function logout(Request $request)
-    // {
-    //     Auth::logout();
-    //     $request->session()->invalidate();
-    //     $request->session()->regenerateToken();
-    //     return redirect('/');
-    // }
-    // public function registerProcess(Request $request)
-    // {
-    //    $request->validate([
-    //         'username' => 'required',
-    //         'email' => 'required|unique:users|max:255',
-    //         'password' => 'required_with:pass|same:pass',
-    //         'cv' => 'required|mimes:pdf|file|max:5000',
-    //     ],[
-    //         'password.same' => 'Konfirmasi Password Tidak Sesuai',
-    //         'email.unique' => 'Email Sudah Ada Di Database',
-    //         'cv.mimes' => 'CV Harus Berformat PDF',
-    //     ]);
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect('login');
+    }
+    public function registerProcess(Request $request)
+    {
+       $request->validate([
+            'nama' => 'required|max:255',
+            'email' => 'required|unique:users|max:255',
+            'password' => 'required_with:pass|same:pass',
+            'alamat' => 'required|max:255',
+            'no' => 'max:255',
+            'tanggal' => 'required|max:255',
+        ],[
+            'password.same' => 'Konfirmasi Password Tidak Sesuai',
+            'email.unique' => 'Email Sudah Ada Di Database',
+        ]);
 
-    //     $upload = Storage::disk('public')->put('cv',  $request ->file('cv'));
         
-    //     // $user = User::create($request->all());
+        // $user = User::create($request->all());
         
-    //     User::create([
-    //         'username' => $request -> username,
-    //         'email' => $request -> email,
-    //         'password' => Hash::make($request -> password),
-    //         'cv' => $upload,
-    //         'role_id' => 2
-    //     ]);
-    //     Session::flash('status', 'success');
-    //     Session::flash('message', 'Daftar berhasil. Silahkan Tunggu Persetujuan Admin');
-    //     return redirect('register');
-    // }
+        User::create([
+            'username' => $request -> username,
+            'email' => $request -> email,
+            'password' => Hash::make($request -> password),
+            'role_id' => 2
+        ]);
+        Session::flash('status', 'success');
+        Session::flash('message', 'Daftar berhasil. Silahkan Tunggu Persetujuan Admin');
+        return redirect('register');
+    }
     // public function registerkomentarProcess(Request $request)
     // {
     //     $validated = $request->validate([
