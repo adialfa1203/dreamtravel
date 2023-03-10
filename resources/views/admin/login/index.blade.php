@@ -30,7 +30,7 @@
       <div class="wrapper">
       <section class="login-content">
          <div class="container">
-            <div class="row align-items-center justify-content-center height-self-center">
+            <div class="row align-items-center flex-column justify-content-center height-self-center">
                @if (session('status'))
                <div class="alert alert-danger">
                   {{ session('message')}}

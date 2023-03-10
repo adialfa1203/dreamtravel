@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CokController;
 use App\Http\Controllers\DetailController;
+use App\Http\Controllers\HalamanController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\NotifikasiController;
 use App\Http\Controllers\PemilikController;
@@ -25,16 +27,16 @@ use App\Http\Controllers\RegisterController;
 
 Route::get('admin', function () {
     return view('admin.beranda.index');
-})->middleware('auth');
+})->middleware(['auth', 'only_admin']);
 //login
 // Route::get('login', function () {
 //     return view('admin.login.index');
 // });
-Route::get('login',[AuthController::class,'login'])->name('login');
-Route::post('login',[AuthController::class,'authenticate']);
+Route::get('login',[AuthController::class,'login'])->name('login')->middleware('only_guest');
+Route::post('login',[AuthController::class,'authenticate'])->middleware('only_guest');
 
 //register
-Route::get('register',[AuthController::class,'register']);
+Route::get('register',[AuthController::class,'register'])->middleware('only_guest');
 
 Route::get('pengguna', function () {
     return view('admin.pengguna.index');
@@ -87,3 +89,6 @@ Route::get('profile', [PenggunaWebController::class, 'indexprofile']);
 // Route::get('proff', [PenggunaWebController::class, 'proff']);
 Route::get('tentangkami', [PenggunaWebController::class, 'indextentangkami']);
 Route::get('beranda', [PenggunaWebController::class, 'index']);
+
+Route::get('halaman', [HalamanController::class, 'halaman'])->middleware(['auth', 'only_travel']);
+Route::get('cok', [CokController::class, 'cok'])->middleware('auth');
