@@ -29,7 +29,7 @@ class AuthController extends Controller
 
         if (Auth::attempt($credentials)) {
             //cek apakah user aktif
-            if (Auth::user()->status != 'aktif') {
+            if (Auth::user()->status != 'active') {
                 Auth::logout();
                 $request->session()->invalidate();
                 $request->session()->regenerateToken();
@@ -40,7 +40,7 @@ class AuthController extends Controller
             }
             $request->session()->regenerate();
             if (Auth::user()-> role_id == 1) {
-                return redirect('/');
+                return redirect('admin');
             }
             if (Auth::user()-> role_id == 2) {
                 return redirect('halaman');

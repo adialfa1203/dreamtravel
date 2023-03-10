@@ -23,22 +23,18 @@ use App\Http\Controllers\RegisterController;
 |
 */
 
-Route::get('/', function () {
+Route::get('admin', function () {
     return view('admin.beranda.index');
-});
+})->middleware('auth');
 //login
-Route::get('login', function () {
-    return view('admin.login.index');
-});
-Route::get('login',[AuthController::class,'login'])->middleware('guest');
+// Route::get('login', function () {
+//     return view('admin.login.index');
+// });
+Route::get('login',[AuthController::class,'login'])->name('login');
 Route::post('login',[AuthController::class,'authenticate']);
 
 //register
-Route::get('register', function () {
-    return view('admin.register.index');
-});
-Route::get('/register',[RegisterController::class,'index']);
-Route::post('/register',[RegisterController::class,'store']);
+Route::get('register',[AuthController::class,'register']);
 
 Route::get('pengguna', function () {
     return view('admin.pengguna.index');
