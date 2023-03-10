@@ -76,8 +76,8 @@ class  AuthController extends Controller
             'password.same' => 'Konfirmasi Password Tidak Sesuai',
             'email.unique' => 'Email Sudah Ada Di Database',
         ]);
-
         
+                
         // $user = User::create($request->all());
         
         User::create([
