@@ -43,8 +43,7 @@
                                     <div class="row">
                                        <div class="col-lg-12">
                                           <div class="floating-label form-group">
-                                             <input type="email" name="email" id="typeEmailX-2" class="form-control form-control-lg @error('email') is-invalid @enderror" autofocus required value="{{ old('email') }}" />
-                                             <label>Email</label>
+                                             <input type="email" name="email" placeholder="Email" id="typeEmailX-2" class="form-control form-control-lg @error('email') is-invalid @enderror" autofocus required value="{{ old('email') }}" />
                                              @error('email')
                                              <div class="div invalid-feedback">
                                                 Email Wajib diisi dengan benar
@@ -54,8 +53,7 @@
                                        </div>
                                        <div class="col-lg-12">
                                           <div class="floating-label form-group">
-                                             <input type="password" name="password" id="typePasswordX-2" class="form-control form-control-lg" required/>
-                                             <label>Password</label>
+                                             <input type="password" placeholder="Password" name="password" id="typePasswordX-2" class="form-control form-control-lg" required/>
                                           </div>
                                        </div>
                                        <div class="col-lg-6">

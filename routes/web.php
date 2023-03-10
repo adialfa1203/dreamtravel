@@ -1,11 +1,13 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DetailController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\NotifikasiController;
 use App\Http\Controllers\PemilikController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PenggunaController;
+use App\Http\Controllers\PenggunaWebController;
 use App\Http\Controllers\PesananController;
 use App\Http\Controllers\PesanNavController;
 use App\Http\Controllers\RegisterController;
@@ -28,8 +30,8 @@ Route::get('/', function () {
 Route::get('login', function () {
     return view('admin.login.index');
 });
-Route::get('login',[LoginController::class,'index'])->middleware('guest')->name('login');
-Route::post('login',[LoginController::class,'authenticate']);
+Route::get('login',[AuthController::class,'login'])->middleware('guest');
+Route::post('login',[AuthController::class,'authenticate']);
 
 //register
 Route::get('register', function () {
@@ -78,3 +80,14 @@ Route::get('/deletnotif/{id}',[NotifikasiController::class,'deletnotif']);
 Route::get('/delete/{id}',[PenggunaController::class,'delete'])->name('delete');
 Route::get('/destroy/{id}',[PenggunaController::class,'destroy'])->name('destroy');
 Route::get('/hps/{id}',[PesananController::class,'hps'])->name('hps');
+
+Route::get('hasilpencarian',[PenggunaWebController::class,'indexhasilpencarian']);
+Route::get('detailkendaraan', [PenggunaWebController::class, 'indexdetailkendaraan']);
+Route::get('faq', [PenggunaWebController::class, 'indexfaq']);
+Route::get('detailtravel', [PenggunaWebController::class, 'indexdetailtravel']);
+Route::get('kontak', [PenggunaWebController::class, 'indexkontak']);
+Route::get('pesan', [PenggunaWebController::class, 'indexpesan']);
+Route::get('profile', [PenggunaWebController::class, 'indexprofile']);
+// Route::get('proff', [PenggunaWebController::class, 'proff']);
+Route::get('tentangkami', [PenggunaWebController::class, 'indextentangkami']);
+Route::get('beranda', [PenggunaWebController::class, 'index']);
