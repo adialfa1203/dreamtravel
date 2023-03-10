@@ -42,7 +42,7 @@
                         <div class="d-flex align-items-center auth-content">
                            <div class="col-lg-7 align-self-center">
                               <div class="p-3">
-                                 <h2 class="mb-2">Masuk</h2>
+                                 <h2 class="mb-2">Masukk</h2>
                                  <p>Masuk untuk tetap terhubung.</p>
                                  <form>
                                     <div class="row">
