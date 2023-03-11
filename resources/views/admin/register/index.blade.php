@@ -57,39 +57,32 @@
                                     <div class="row">
                                        <div class="col-lg-6">Nama
                                           <div class="floating-label form-group">
-                                             <input class="floating-input form-control" type="text" placeholder="Nama">
+                                             <input class="floating-input form-control" name="nama" type="text" placeholder="Nama">
                                           </div>
                                        </div>
                                        <div class="col-lg-6">Alamat
                                           <div class="floating-label form-group">
-                                             <input class="floating-input form-control" type="text" placeholder="Alamat">
+                                             <input class="floating-input form-control" name="alamat" type="text" placeholder="Alamat">
                                           </div>
                                        </div>
                                        <div class="col-lg-6">Tanggal Lahir
                                           <div class="floating-label form-group">
-                                             <input class="floating-input form-control" type="date" placeholder="Tanggal Lahir">
+                                             <input class="floating-input form-control" name="tanggal" type="date" placeholder="Tanggal Lahir">
                                           </div>
                                        </div>                        
                                        <div class="col-lg-6">No Telepon
                                           <div class="floating-label form-group">
-                                             <input class="floating-input form-control" type="number" placeholder="Nomor Telepon">
+                                             <input class="floating-input form-control" name="no" type="number" placeholder="Nomor Telepon">
                                           </div>
                                        </div>
                                        <div class="col-lg-6">Email
                                           <div class="floating-label form-group">
-                                             <input type="email" name="email" placeholder="Email" id="typeEmailX-2" class="form-control form-control-lg @error('email') is-invalid @enderror" autofocus required value="{{ old('email') }}" />
-                                             @error('email')
-                                             <div class="div invalid-feedback">
-                                                Email Wajib diisi dengan benar
-                                             </div>
-                                              @enderror
+                                             <input class="floating-input form-control" name="email" type="email" placeholder="Email">
                                           </div>
                                        </div>
                                        <div class="col-lg-6">Password
                                           <div class="floating-label form-group">
-                                             <input type="password" name="password" placeholder="Password" id="form3Example4c" class="form-control @error('password') is-invalid @enderror" requiredx/>
-                                             @error('password')
-                                             <div class="invalid-feedback">Password wajib diisi</div> @enderror
+                                             <input class="floating-input form-control" type="password" placeholder="Password">
                                           </div>
                                        </div>
                                        <!-- <div class="col-lg-6">

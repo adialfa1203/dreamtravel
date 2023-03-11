@@ -73,21 +73,24 @@ class  AuthController extends Controller
             'no' => 'max:255',
             'tanggal' => 'required|max:255',
         ],[
-            'password.same' => 'Konfirmasi Password Tidak Sesuai',
-            'email.unique' => 'Email Sudah Ada Di Database',
+            // 'password.same' => 'Konfirmasi Password Tidak Sesuai',
+            // 'email.unique' => 'Email Sudah Ada Di Database',
         ]);
         
                 
         // $user = User::create($request->all());
         
         User::create([
-            'username' => $request -> username,
+            'nama' => $request -> nama,
             'email' => $request -> email,
             'password' => Hash::make($request -> password),
-            'role_id' => 2
+            'alamat' => $request -> alamat,
+            'no' => $request ->no,
+            'tanggal' => $request -> tanggal,
+            'role_id' => 3
         ]);
         Session::flash('status', 'success');
-        Session::flash('message', 'Daftar berhasil. Silahkan Tunggu Persetujuan Admin');
+        Session::flash('message', 'Daftar berhasil');
         return redirect('register');
     }
     // public function registerkomentarProcess(Request $request)
