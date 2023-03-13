@@ -82,7 +82,7 @@
                                        </div>
                                        <div class="col-lg-6">Password
                                           <div class="floating-label form-group">
-                                             <input class="floating-input form-control" type="password" placeholder="Password">
+                                             <input class="floating-input form-control" name="password" type="password" placeholder="Password">
                                           </div>
                                        </div>
                                        <!-- <div class="col-lg-6">

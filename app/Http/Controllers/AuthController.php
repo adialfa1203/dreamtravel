@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Testing\Fluent\Concerns\Has;
 
@@ -28,6 +29,9 @@ class  AuthController extends Controller
             'password' => ['required'],
         ]);
 
+        // dd($request->all());
+        // dd($credentials);
+
         if (Auth::attempt($credentials)) {
             //cek apakah user aktif
             if (Auth::user()->status != 'active') {
@@ -47,7 +51,7 @@ class  AuthController extends Controller
                 return redirect('halaman');
             }
             if (Auth::user()-> role_id == 3) {
-                return redirect('guest');
+                return redirect('/');
             }
 
             // $request->session()->regenerate();
@@ -69,12 +73,12 @@ class  AuthController extends Controller
        $request->validate([
             'nama' => 'required|max:255',
             'email' => 'required|unique:users|max:255',
-            'password' => 'required_with:pass|same:pass',
+            'password' => 'required',
             'alamat' => 'required|max:255',
             'no' => 'max:255',
             'tanggal' => 'required|max:255',
         ],[
-            'password.same' => 'Konfirmasi Password Tidak Sesuai',
+            // 'password.same' => 'Konfirmasi Password Tidak Sesuai',
             'email.unique' => 'Email Sudah Terdaftar',
         ]);
         
@@ -85,10 +89,12 @@ class  AuthController extends Controller
             'nama' => $request -> nama,
             'email' => $request -> email,
             'alamat' => $request -> alamat,
-            'password' => Hash::make($request -> password),
+            'password' => $request->password,
+            'password' => bcrypt($request->password),
+            // 'remember_token' => Str::random(60),
             'no' => $request ->no,
             'tanggal' => $request -> tanggal,
-            'role_id' => 3
+            'role_id' => 2
 
         ]);
         // $request->password = Hash::make($request -> password);
