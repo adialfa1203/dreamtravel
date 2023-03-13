@@ -48,7 +48,7 @@ class  AuthController extends Controller
                 return redirect('admin');
             }
             if (Auth::user()-> role_id == 2) {
-                return redirect('halaman');
+                return redirect('beranda_travel');
             }
             if (Auth::user()-> role_id == 3) {
                 return redirect('/');

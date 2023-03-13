@@ -17,7 +17,7 @@ class OnlyTravel
     public function handle(Request $request, Closure $next)
     {
         if (Auth::user()->role_id != 2) {
-            return redirect('cok');
+            return redirect('/');
         }
         return $next($request);
     }
