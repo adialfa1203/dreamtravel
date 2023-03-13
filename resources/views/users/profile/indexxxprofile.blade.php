@@ -150,7 +150,7 @@
                                 <h3 class="mb-0">AkunKU</h3>
                             </div>
                             <div class="col-4 text-right">
-                                <a href="editprofile.html" class="btn btn-sm btn-primary">Ubah Akun</a>
+                                <a href="profile/1" class="btn btn-sm btn-primary">Ubah Akun</a>
                             </div>
                         </div>
                     </div>
@@ -162,17 +162,17 @@
                                     <div class="col-lg-6">
                                         <div class="form-group focused">
                                             <label class="form-control-label" for="input-username">Nama</label>
-                                            <input type="text" id="input-username"
+                                            <input type="email" id="input-username"
                                                 class="form-control form-control-alternative" placeholder="Username"
-                                                value="lucky.jesse">
+                                                value="{{ $users->nama }}" readonly>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group focused">
                                             <label class="form-control-label" for="input-tanggallahir">Usia</label>
-                                            <input type="text" id="input-tanggallahir"
+                                            <input type="email" id="input-tanggallahir"
                                                 class="form-control form-control-alternative"
-                                                placeholder="Tanggal Lahir" value="27">
+                                                placeholder="Tanggal Lahir" value="{{ $users->tanggal }}" readonly>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
@@ -180,15 +180,15 @@
                                             <label class="form-control-label" for="input-email">Email</label>
                                             <input type="email" id="input-email"
                                                 class="form-control form-control-alternative"
-                                                placeholder="jesse@example.com">
+                                                placeholder="jesse@example.com" value="{{ $users->email }}" readonly>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group focused">
                                             <label class="form-control-label" for="input-password">Password</label>
-                                            <input type="text" id="input-password"
+                                            <input type="email" id="input-password"
                                                 class="form-control form-control-alternative" placeholder="Password"
-                                                value="12345678a">
+                                                value="{{ $users->password }}" readonly>
                                         </div>
                                     </div>
                                 </div>
@@ -222,7 +222,7 @@
                                         <div class="form-group focused">
                                             <label class="form-control-label" for="input-address">Alamat</label>
                                             <input id="input-address" class="form-control form-control-alternative"
-                                                placeholder="Home Address" value="Hatimu" type="text">
+                                                placeholder="Home Address" value="{{ $users->alamat }}" type="email" readonly>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -230,7 +230,7 @@
                                             <label class="form-control-label" for="input-nomortelepon">Nomor
                                                 Telepon</label>
                                             <input id="input-nomortelepon" class="form-control form-control-alternative"
-                                                placeholder="Nomor Telepon" value="11100011101001001" type="text">
+                                                placeholder="Nomor Telepon" value="{{ $users->no }}" type="email" readonly>
                                         </div>
                                     </div>
                                 </div>

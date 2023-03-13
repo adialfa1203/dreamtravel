@@ -1,5 +1,5 @@
 @extends('layouts.users')
-@section('section')
+@section('content')
     <!-- breadcrumbs start-->
   <section style="background-image:url('pic/breadcrumbs/bg-1.jpg');" class="breadcrumbs">
     <div class="container">

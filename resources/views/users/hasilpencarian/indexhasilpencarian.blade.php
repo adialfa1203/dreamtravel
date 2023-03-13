@@ -108,7 +108,7 @@
                     <h5>Rp. 100.000,00 / Orang</h5>
                   </div>
                   <a class="recom-button faq-title" data-toggle="collapse" data-target="#faqCollapse-1"
-                    data-aria-expanded="true" data-aria-controls="faqCollapse-1">Selengkapnya</a><a href="pesan.html"
+                    data-aria-expanded="true" data-aria-controls="faqCollapse-1">Selengkapnya</a><a href="{{ url('pemesanan') }}"
                     class="cws-button small alt">Pesan
                     Sekarang</a>
                   <!-- <div class="action font-2">20%</div> -->

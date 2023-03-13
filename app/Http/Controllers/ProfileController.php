@@ -8,7 +8,9 @@ class ProfileController extends Controller
 {
     public function index()
     {
-        return view ('users.beranda.index');
+        $users = Users::all();
+        return view('users.profile.indexprofile',compact(['users']));
+        
     }
 
     public function indexdetailkendaraan()
@@ -50,4 +52,10 @@ class ProfileController extends Controller
     {
         return view ('users.tentangkami.indextentangkami');
     }
+
+    public function edit()
+    {
+        return view('users.profile.editprofile');
+    }
+
 }
