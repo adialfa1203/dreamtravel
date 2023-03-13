@@ -15,7 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('id_plat');
             $table->string('nama_kendaraan');
+            $table->string('kategori');
+            $table->string('bahan_bakar');
             $table->string('foto');
+
             $table->timestamps();
         });
     }

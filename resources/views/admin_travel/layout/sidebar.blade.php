@@ -55,11 +55,6 @@
                                                 <i class="las la-minus"></i><span>Detail Tujuan</span>
                                             </a>
                                         </li>
-                                        <li class="submenu @yield('/kategori')">
-                                            <a href="/kategori">
-                                                <i class="las la-minus"></i><span>Kategori Kendaraan</span>
-                                            </a>
-                                        </li>
                                     </ul>
                                 </li>
                           <ul id="otherpage" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">

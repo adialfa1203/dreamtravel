@@ -15,6 +15,14 @@ use App\Http\Controllers\PesananController;
 use App\Http\Controllers\PesanNavController;
 use App\Http\Controllers\RegisterController;
 
+//admin travel
+use App\Http\Controllers\BerandaTravelController;
+use App\Http\Controllers\TravelController;
+use App\Http\Controllers\FasilitasController;
+use App\Http\Controllers\DetailHargaController;
+use App\Http\Controllers\DetailTujuanController;
+use App\Http\Controllers\TambahController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -45,47 +53,61 @@ Route::middleware('only_guest')->group(function() {
 });
 
 Route::middleware('auth')->group(function() {
-    //admin
-    Route::get('admin', function () {
-        return view('admin.beranda.index');
-    })->middleware(['auth', 'only_admin']);
-    Route::get('profil', function () {
-        return view('admin.profil.index');
+    Route::middleware('only_admin')->group(function(){
+        //admin
+        Route::get('admin', function () {
+            return view('admin.beranda.index');
+        })->middleware(['auth', 'only_admin']);
+        Route::get('profil', function () {
+            return view('admin.profil.index');
+        });
+        Route::get('edit', function () {
+            return view('admin.profil.edit');
+        });
+        Route::get('pesan', function () {
+            return view('admin.pesan-navbar.index');
+        });
+        Route::get('semuapesan', function () {
+            return view('admin.pesan-navbar.semuapesan');
+        });
+        Route::get('semuanotif', function () {
+            return view('admin.notifikasi.semuanotifikasi');
+        });
+        Route::get('notif', function () {
+            return view('admin.notifikasi.index');
+        });
+        Route::get('pemilik',[PemilikController::class,'index']);
+        Route::get('pengguna',[PenggunaController::class,'index']);
+        Route::get('pesanan',[PesananController::class,'index']);
+        Route::get('pesannav',[PesanNavController::class,'index']);
+        Route::get('/deletpesan/{id}',[PesanNavController::class,'deletpesan']);
+        Route::get('/deletepemilik/{id}',[PemilikController::class,'deletepemilik']);
+        Route::get('/dataa/{id}',[DetailController::class,'dataa'])->name('dataa');
+        Route::get('semuanotif',[NotifikasiController::class,'index']);
+        Route::get('/deletnotif/{id}',[NotifikasiController::class,'deletnotif']);
+        Route::get('/delete/{id}',[PenggunaController::class,'delete'])->name('delete');
+        Route::get('/destroy/{id}',[PenggunaController::class,'destroy'])->name('destroy');
+        Route::get('/hps/{id}',[PesananController::class,'hps'])->name('hps');
+        //logout
+        Route::get('logout', [AuthController::class,'logout']);
+        //halaaman percobaan
+        //test faq
+        // Route::get('Komentar',[HubungiKamiController::class, 'create']);
     });
-    Route::get('edit', function () {
-        return view('admin.profil.edit');
+    Route::middleware('only_travel')->group(function() {
+        //admin_travel
+        //beranda admin_travel
+        Route::get('beranda_travel',[BerandaTravelController::class,'beranda_travel']);
+        //travel
+        Route::get('travel',[TravelController::class,'travel']);
+        //fasilitas
+        Route::get('fasilitas',[FasilitasController::class, 'fasilitas']);
+        //detail_harga
+        Route::get('detail_harga',[DetailHargaController::class, 'detail_harga']);
+        //detail_tujuan
+        Route::get('detail_tujuan',[DetailTujuanController::class, 'detail_tujuan']);
+        //tambah
+        Route::get('tambah',[TambahController::class, 'tambah'])->name('tambah');
     });
-    Route::get('pesan', function () {
-        return view('admin.pesan-navbar.index');
     });
-    Route::get('semuapesan', function () {
-        return view('admin.pesan-navbar.semuapesan');
-    });
-    Route::get('semuanotif', function () {
-        return view('admin.notifikasi.semuanotifikasi');
-    });
-    Route::get('notif', function () {
-        return view('admin.notifikasi.index');
-    });
-    Route::get('pemilik',[PemilikController::class,'index']);
-    Route::get('pengguna',[PenggunaController::class,'index']);
-    Route::get('pesanan',[PesananController::class,'index']);
-    Route::get('pesannav',[PesanNavController::class,'index']);
-    Route::get('/deletpesan/{id}',[PesanNavController::class,'deletpesan']);
-    Route::get('/deletepemilik/{id}',[PemilikController::class,'deletepemilik']);
-    Route::get('/dataa/{id}',[DetailController::class,'dataa'])->name('dataa');
-    Route::get('semuanotif',[NotifikasiController::class,'index']);
-    Route::get('/deletnotif/{id}',[NotifikasiController::class,'deletnotif']);
-    Route::get('/delete/{id}',[PenggunaController::class,'delete'])->name('delete');
-    Route::get('/destroy/{id}',[PenggunaController::class,'destroy'])->name('destroy');
-    Route::get('/hps/{id}',[PesananController::class,'hps'])->name('hps');
-    //logout
-    Route::get('logout', [AuthController::class,'logout']);
-    //halaaman percobaan
-    Route::get('halaman', [HalamanController::class, 'halaman'])->middleware('only_travel');
-    Route::get('cok', [CokController::class, 'cok']);
-    //test faq
-    Route::get('Komentar',[HubungiKamiController::class, 'create']);
-});
-
 
