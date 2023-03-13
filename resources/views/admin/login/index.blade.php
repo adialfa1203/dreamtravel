@@ -30,7 +30,7 @@
       <div class="wrapper">
       <section class="login-content">
          <div class="container">
-            <div class="row align-items-center justify-content-center height-self-center">
+            <div class="row align-items-center flex-column justify-content-center height-self-center">
                @if (session('status'))
                <div class="alert alert-danger">
                   {{ session('message')}}
@@ -48,17 +48,17 @@
                                     <div class="row">
                                        <div class="col-lg-12">
                                           <div class="floating-label form-group">
-                                             <input type="email" name="email" placeholder="Email" id="typeEmailX-2" class="form-control form-control-lg @error('email') is-invalid @enderror" autofocus required value="{{ old('email') }}" />
+                                             <input type="email" name="email" placeholder="Email" id="email" class="form-control form-control-lg @error('email') is-invalid @enderror" autofocus required value="{{ old('email') }}" />
                                              @error('email')
                                              <div class="div invalid-feedback">
                                                 Email Wajib diisi dengan benar
                                              </div>
-                                     @enderror
+                                              @enderror
                                           </div>
                                        </div>
                                        <div class="col-lg-12">
                                           <div class="floating-label form-group">
-                                             <input type="password" placeholder="Password" name="password" id="typePasswordX-2" class="form-control form-control-lg" required/>
+                                             <input type="password" placeholder="Password" name="password" id="password" class="form-control form-control-lg" required/>
                                           </div>
                                        </div>
                                        <div class="col-lg-6">
@@ -71,7 +71,7 @@
                                           <a href="auth-recoverpw.html" class="text-primary float-right">Lupa password?</a>
                                        </div>
                                     </div>
-                                    <a href="{{url('beranda')}}">
+                                    <a href="">
                                        <button type="submit" class="btn btn-primary">Masuk</button>
                                     </a>
                                     <p class="mt-3">

@@ -30,7 +30,21 @@
       <div class="wrapper">
       <section class="login-content">
          <div class="container">
-            <div class="row align-items-center justify-content-center height-self-center">
+            <div class="row align-items-center flex-column justify-content-center height-self-center">
+               @if ($errors->any())
+					<div class="alert alert-danger">
+						<ul>
+							@foreach ($errors->all() as $error)
+								<li>{{$error}}</li>
+							@endforeach
+						</ul>
+					</div>
+					@endif
+					@if (session('status'))
+                        <div class="alert alert-success">
+                            {{ session('message') }}
+                        </div>
+                    @endif
                <div class="col-lg-8">
                   <div class="card auth-card">
                      <div class="card-body p-0">
@@ -41,48 +55,34 @@
                                  <p>Buat akun Anda.</p>
                                  <form>
                                     <div class="row">
-                                       <div class="col-lg-6">
+                                       <div class="col-lg-6">Nama
                                           <div class="floating-label form-group">
-                                             <input type="text" name="nama" id="form3Example1c" placeholder="" class="form-control @error('name') is-invalid @enderror" required value="{{ old('name') }}"/>
-                                             <label>Nama</label>
-                                             @error('name')
-                                             <div class="invalid-feedback">Nama Wajib diisi dengan benar (Kalimat tidak boleh kurang dari 3 angka)</div> @enderror
+                                             <input class="floating-input form-control" name="nama" type="text" placeholder="Nama">
                                           </div>
                                        </div>
-                                       <!-- <div class="col-lg-6">
+                                       <div class="col-lg-6">Alamat
                                           <div class="floating-label form-group">
-                                             <input class="floating-input form-control" type="text" placeholder=" ">
-                                             <label>Nama Keluarga</label>
-                                          </div>
-                                       </div> -->
-                                       <div class="col-lg-6">
-                                          <div class="floating-label form-group">
-                                             <input type="email" name="email" placeholder="" id="form3Example3c" class="form-control @error('email') is-invalid @enderror" required value="{{ old('email') }}"/>
-                                             <label>Email</label>
-                                             @error('email')
-                                             <div class="invalid-feedback">Email Wajib diisi dengan benar</div> @enderror
+                                             <input class="floating-input form-control" name="alamat" type="text" placeholder="Alamat">
                                           </div>
                                        </div>
-                                       <div class="col-lg-6">
+                                       <div class="col-lg-6">Tanggal Lahir
                                           <div class="floating-label form-group">
-                                             <input class="floating-input form-control" type="text" placeholder="">
-                                             <label>Nomor Telepon</label>
+                                             <input class="floating-input form-control" name="tanggal" type="date" placeholder="Tanggal Lahir">
+                                          </div>
+                                       </div>                        
+                                       <div class="col-lg-6">No Telepon
+                                          <div class="floating-label form-group">
+                                             <input class="floating-input form-control" name="no" type="number" placeholder="Nomor Telepon">
                                           </div>
                                        </div>
-                                       <div class="col-lg-6">
+                                       <div class="col-lg-6">Email
                                           <div class="floating-label form-group">
-                                             <input type="password" name="password" placeholder="" id="form3Example4c" class="form-control @error('password') is-invalid @enderror" requiredx/>
-                                             <label>Password</label>
-                                             @error('password')
-                                             <div class="invalid-feedback">Password wajib diisi</div> @enderror
+                                             <input class="floating-input form-control" name="email" type="email" placeholder="Email">
                                           </div>
                                        </div>
-                                       <div class="col-lg-6">
+                                       <div class="col-lg-6">Password
                                           <div class="floating-label form-group">
-                                             <input type="password" name="password" placeholder="" id="form3Example4c" class="form-control @error('password') is-invalid @enderror" requiredx/>
-                                             <label>Tanggal Lahir</label>
-                                             @error('password')
-                                             <div class="invalid-feedback">Tanggal Lahir Wajib Diisi</div> @enderror
+                                             <input class="floating-input form-control" name="password" type="password" placeholder="Password">
                                           </div>
                                        </div>
                                        <!-- <div class="col-lg-6">
