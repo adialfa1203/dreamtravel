@@ -1,11 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\CokController;
 use App\Http\Controllers\DetailController;
-use App\Http\Controllers\HalamanController;
-use App\Http\Controllers\HubungiKamiController;
-use App\Http\Controllers\LoginController;
 use App\Http\Controllers\NotifikasiController;
 use App\Http\Controllers\PemilikController;
 use Illuminate\Support\Facades\Route;
@@ -13,7 +9,6 @@ use App\Http\Controllers\PenggunaController;
 use App\Http\Controllers\PenggunaWebController;
 use App\Http\Controllers\PesananController;
 use App\Http\Controllers\PesanNavController;
-use App\Http\Controllers\RegisterController;
 
 //admin travel
 use App\Http\Controllers\BerandaTravelController;
