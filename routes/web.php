@@ -50,6 +50,9 @@ Route::middleware('only_guest')->group(function() {
 });
 
 Route::middleware('auth')->group(function() {
+    //pemesanan
+    Route::get('pemesanan', [PenggunaWebController::class, 'indexpesan']);
+    //logout
     Route::get('logout', [AuthController::class,'logout']);
     Route::middleware('only_admin')->group(function(){
         //admin
@@ -86,7 +89,7 @@ Route::middleware('auth')->group(function() {
         Route::get('/delete/{id}',[PenggunaController::class,'delete'])->name('delete');
         Route::get('/destroy/{id}',[PenggunaController::class,'destroy'])->name('destroy');
         Route::get('/hps/{id}',[PesananController::class,'hps'])->name('hps');
-        Route::get('pemesanan', [PenggunaWebController::class, 'indexpesan']);
+        
         //logout
        
         //halaaman percobaan
