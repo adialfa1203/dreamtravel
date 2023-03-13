@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Testing\Fluent\Concerns\Has;
 
 class  AuthController extends Controller
 {
@@ -83,12 +84,14 @@ class  AuthController extends Controller
         User::create([
             'nama' => $request -> nama,
             'email' => $request -> email,
-            'password' => Hash::make($request -> password),
             'alamat' => $request -> alamat,
+            'password' => Hash::make($request -> password),
             'no' => $request ->no,
             'tanggal' => $request -> tanggal,
             'role_id' => 3
+
         ]);
+        // $request->password = Hash::make($request -> password);
         Session::flash('status', 'success');
         Session::flash('message', 'Daftar berhasil');
         return redirect('register');
