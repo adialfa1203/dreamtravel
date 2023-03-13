@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class PenggunaWebController extends Controller
 {
@@ -41,9 +42,10 @@ class PenggunaWebController extends Controller
         return view ('users.pesan.indexpesan');
     }   
 
-    public function indexprofile()
+    public function indexprofile($id)
     {
-        return view ('users.profile.indexxxprofile');
+        $users = User::find($id);
+        return view('users.profile.indexxxprofile',compact(['users']));
     }
     
     public function indextentangkami()
@@ -51,8 +53,12 @@ class PenggunaWebController extends Controller
         return view ('users.tentangkami.indextentangkami');
     }
 
-    public function proff()
+    // public function proff()
+    // {
+    //     Return view('users.proff.index');
+    // }
+    public function editprofil()
     {
-        Return view('users.proff.index');
+       return view('users.profile.editprofile');
     }
 }

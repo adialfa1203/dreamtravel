@@ -22,8 +22,7 @@ return new class extends Migration
             $table->integer('no');
             $table->date('tanggal');
             $table->string('status')->default('tidak aktif');
-            $table->unsignedBigInteger('role_id');
-            $table->foreign('role_id')->references('id')->on('roles');
+            $table->bigInteger('role_id')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

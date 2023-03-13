@@ -11,6 +11,7 @@ use App\Http\Controllers\PenggunaWebController;
 use App\Http\Controllers\PesananController;
 use App\Http\Controllers\PesanNavController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -83,7 +84,11 @@ Route::get('faq', [PenggunaWebController::class, 'indexfaq']);
 Route::get('detailtravel', [PenggunaWebController::class, 'indexdetailtravel']);
 Route::get('kontak', [PenggunaWebController::class, 'indexkontak']);
 Route::get('pesan', [PenggunaWebController::class, 'indexpesan']);
-Route::get('profile', [PenggunaWebController::class, 'indexprofile']);
 // Route::get('proff', [PenggunaWebController::class, 'proff']);
 Route::get('tentangkami', [PenggunaWebController::class, 'indextentangkami']);
 Route::get('beranda', [PenggunaWebController::class, 'index']);
+
+// Profile
+
+Route::get('/profile/{id}', [PenggunaWebController::class, 'indexprofile']);
+Route::get('editprofil', [PenggunaWebController::class,'editprofil']);
