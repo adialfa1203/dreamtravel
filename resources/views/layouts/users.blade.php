@@ -106,7 +106,7 @@
         <div class="inner-nav desktop-nav">
           <ul class="clearlist">
             <!-- Item With Sub-->
-            <li><a href="/beranda" class="mn-has-sub">Beranda</i></a>
+            <li><a href="/" class="mn-has-sub">Beranda</i></a>
               <!-- <ul class="mn-sub">
                   <li class="active"><a href="index.html">Standart Slider</a></li>
                   <li><a href="index-search.html">Main Search</a></li>
@@ -260,7 +260,7 @@
           <div class="widget-footer">
             <h4>Pilih Tautan</h4>
             <div class="widget-tags-wrap text-left">
-              <li style=" color: #a9b5c1;"><a href="/beranda" class="footer-nav"
+              <li style=" color: #a9b5c1;"><a href="/" class="footer-nav"
                   style=" color: #a9b5c1;">Beranda</a><br></li>
               <li style=" color: #a9b5c1;"><a href="/hasilpencarian" class="footer-nav"
                   style=" color: #a9b5c1;">Travel</a><br></li>
