@@ -292,15 +292,15 @@
 <form class="form clearfix">
 <div class="row">
 <div class="col-md-12">
-  <input type="text" name="email" value="" size="40" placeholder="Nama Lengkap"
+  <input type="text" name="nama" value="" size="40" placeholder="Nama Lengkap"
     aria-required="true" class="form-row form-row-first">
 </div>
 <div class="col-md-12">
-  <input type="text" name="password" value="" size="40" placeholder="Email" aria-required="true"
+  <input type="email" name="email" value="" size="40" placeholder="Email" aria-required="true"
     class="form-row form-row-last">
 </div>
 <div class="col-md-12">
-  <textarea name="message" cols="40" rows="4" placeholder="Tulis Pertanyaan" aria-invalid="false"
+  <textarea name="pesan" cols="40" rows="4" placeholder="Tulis Pertanyaan" aria-invalid="false"
     aria-required="true" class="mb-20"></textarea>
   <input type="submit" value="Kirim" class="cws-button alt float-right">
 </div>

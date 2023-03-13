@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CokController;
 use App\Http\Controllers\DetailController;
 use App\Http\Controllers\HalamanController;
+use App\Http\Controllers\HubungiKamiController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\NotifikasiController;
 use App\Http\Controllers\PemilikController;
@@ -83,6 +84,8 @@ Route::middleware('auth')->group(function() {
     //halaaman percobaan
     Route::get('halaman', [HalamanController::class, 'halaman'])->middleware('only_travel');
     Route::get('cok', [CokController::class, 'cok']);
+    //test faq
+    Route::get('Komentar',[HubungiKamiController::class, 'create']);
 });
 
 

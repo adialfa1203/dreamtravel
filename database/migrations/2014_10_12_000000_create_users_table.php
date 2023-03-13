@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('alamat');
-            $table->integer('no');
+            $table->string('no');
             $table->date('tanggal');
             $table->string('status')->default('active');
             $table->rememberToken();
