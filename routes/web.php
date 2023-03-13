@@ -35,7 +35,7 @@ use App\Http\Controllers\TambahController;
 |
 */
 //halaman utama
-Route::get('/', [PenggunaWebController::class, 'index']);
+Route::get('/', [PenggunaWebController::class, 'indexhasilpencarian']);
 Route::get('hasilpencarian',[PenggunaWebController::class,'indexhasilpencarian']);
 Route::get('profile', [PenggunaWebController::class, 'indexprofile']);
 Route::get('tentangkami', [PenggunaWebController::class, 'indextentangkami']);
@@ -43,7 +43,7 @@ Route::get('detailkendaraan', [PenggunaWebController::class, 'indexdetailkendara
 Route::get('faq', [PenggunaWebController::class, 'indexfaq']);
 Route::get('detailtravel', [PenggunaWebController::class, 'indexdetailtravel']);
 Route::get('kontak', [PenggunaWebController::class, 'indexkontak']);
-Route::get('pesan', [PenggunaWebController::class, 'indexpesan']);
+// Route::get('pesan', [PenggunaWebController::class, 'indexpesan']);
 
 //login register
 Route::middleware('only_guest')->group(function() {
@@ -89,6 +89,7 @@ Route::middleware('auth')->group(function() {
         Route::get('/delete/{id}',[PenggunaController::class,'delete'])->name('delete');
         Route::get('/destroy/{id}',[PenggunaController::class,'destroy'])->name('destroy');
         Route::get('/hps/{id}',[PesananController::class,'hps'])->name('hps');
+        Route::get('pemesanan', [PenggunaWebController::class, 'indexpesan']);
         //logout
         Route::get('logout', [AuthController::class,'logout']);
         //halaaman percobaan

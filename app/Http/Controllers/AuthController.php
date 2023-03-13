@@ -94,7 +94,7 @@ class  AuthController extends Controller
             // 'remember_token' => Str::random(60),
             'no' => $request ->no,
             'tanggal' => $request -> tanggal,
-            'role_id' => 2
+            'role_id' => 3
 
         ]);
         // $request->password = Hash::make($request -> password);

@@ -106,18 +106,18 @@
         <div class="inner-nav desktop-nav">
           <ul class="clearlist">
             <!-- Item With Sub-->
-            <li><a href="/" class="mn-has-sub">Beranda</i></a>
+            {{-- <li><a href="/" class="mn-has-sub">Beranda</i></a> --}}
               <!-- <ul class="mn-sub">
                   <li class="active"><a href="index.html">Standart Slider</a></li>
                   <li><a href="index-search.html">Main Search</a></li>
                   <li><a href="index-slider.html">Full Slider</a></li>
                   <li><a href="index-video.html">Video Slider</a></li>
                 </ul> -->
-            </li>
+            {{-- </li> --}}
             <!-- End Item With Sub-->
-            <li class="slash">/</li>
+            {{-- <li class="slash">/</li> --}}
             <!-- Item With Sub-->
-            <li><a href="/hasilpencarian" class="mn-has-sub">Travel</a>
+            <li><a href="/hasilpencarian" class="mn-has-sub">Beranda</a>
               <!-- Sub-->
               <!-- <ul class="mn-sub">
                   <li><a href="hotels-list.html">Hotels list</a></li>
@@ -260,10 +260,10 @@
           <div class="widget-footer">
             <h4>Pilih Tautan</h4>
             <div class="widget-tags-wrap text-left">
-              <li style=" color: #a9b5c1;"><a href="/" class="footer-nav"
-                  style=" color: #a9b5c1;">Beranda</a><br></li>
+              {{-- <li style=" color: #a9b5c1;"><a href="/" class="footer-nav"
+                  style=" color: #a9b5c1;">Beranda</a><br></li> --}}
               <li style=" color: #a9b5c1;"><a href="/hasilpencarian" class="footer-nav"
-                  style=" color: #a9b5c1;">Travel</a><br></li>
+                  style=" color: #a9b5c1;">Beranda</a><br></li>
               <li style=" color: #a9b5c1;"><a href="/tentangkami" class="footer-nav"
                   style=" color: #a9b5c1;">Tentang Kami</a><br></li>
               <li style=" color: #a9b5c1;"><a href="/faq" class="footer-nav"
