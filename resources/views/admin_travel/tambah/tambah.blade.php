@@ -6,7 +6,7 @@
 
       
         <!-- SmartWizard html -->
-        <div id="smartwizard" dir="rtl-">
+        <form id="smartwizard" dir="rtl-">
             <ul class="nav nav-progress">
                 <li class="nav-item">
                     <a class="nav-link" href="#step-1">
@@ -17,18 +17,19 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#step-2">
                         <span class="num">2</span>
-Fasilatas                    </a>
+                          Fasilatas                    
+                    </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#step-3">
                         <span class="num">3</span>
-                        Shipping Details
+                        Harga
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="#step-4">
                         <span class="num">4</span>
-                        Confirm Order
+                        Tujuan
                     </a>
                 </li>
             </ul>
@@ -38,7 +39,7 @@ Fasilatas                    </a>
                     <form id="form-1" class="row row-cols-1 ms-5 me-5 needs-validation" novalidate>
                         <div class="col">
                             <label for="first-name" class="form-label">No Plat</label>
-                            <input type="text" class="form-control" id="first-name" value="" required>
+                            <input type="text" class="form-control" id="first-name" name="id_plat" required>
                             <div class="valid-feedback">
                                 bagus
                             </div>
@@ -48,7 +49,7 @@ Fasilatas                    </a>
                         </div>
                         <div class="col">
                             <label for="validationCustom02" class="form-label">Nama Kendaraan</label>
-                            <input type="text" class="form-control" id="last-name" value="" required>
+                            <input type="text" class="form-control" id="last-name" name="nama_kendaraan" required>
                             <div class="valid-feedback">
                                 bagus
                             </div>
@@ -58,7 +59,7 @@ Fasilatas                    </a>
                         </div>
                         <div class="col">
                             <label for="validationCustom02" class="form-label">Kategori</label>
-                            <input type="text" class="form-control" id="last-name" value="" required>
+                            <input type="text" class="form-control" id="last-name" name="kategori" required>
                             <div class="valid-feedback">
                                 bagus
                             </div>
@@ -68,7 +69,7 @@ Fasilatas                    </a>
                         </div>
                         <div class="col">
                             <label for="validationCustom02" class="form-label">Bahan Bakar</label>
-                            <input type="text" class="form-control" id="last-name" value="" required>
+                            <input type="text" class="form-control" id="last-name" name="bahan_bakar" required>
                             <div class="valid-feedback">
                                 bagus
                             </div>
@@ -79,7 +80,7 @@ Fasilatas                    </a>
                         
                         <div class="col">
                             <label for="validationCustom02" class="form-label">Foto</label>
-                            <input type="file" class="form-control" id="last-name" value="" required>
+                            <input type="file" class="form-control" id="last-name" name="foto" required>
                             <div class="valid-feedback">
                                 bagus
                             </div>
@@ -93,7 +94,7 @@ Fasilatas                    </a>
                     <form id="form-2" class="row row-cols-1 ms-5 me-5 needs-validation" novalidate>
                       <div class="col">
                         <label for="validationCustom02" class="form-label">Fasilitas</label>
-                        <input type="text" class="form-control" id="last-name" value="" required>
+                        <input type="text" class="form-control" id="last-name" name="fasilitas" required>
                         <div class="valid-feedback">
                             bagus
                         </div>
@@ -103,7 +104,7 @@ Fasilatas                    </a>
                     </div>
                     <div class="col">
                       <label for="validationCustom02" class="form-label">Jumlah</label>
-                      <input type="text" class="form-control" id="last-name" value="" required>
+                      <input type="text" class="form-control" id="last-name" name="jumlah" required>
                       
                       <div class="valid-feedback">
                           bagus
@@ -119,41 +120,65 @@ Fasilatas                    </a>
                 </div>
                 <div id="step-3" class="tab-pane" role="tabpanel" aria-labelledby="step-3">
                     <form id="form-3" class="row row-cols-1 ms-5 me-5 needs-validation" novalidate>
-                        <div class="col">
-                            <label for="address" class="form-label">Address</label>
-                            <input type="text" class="form-control" id="address" placeholder="1234 Main St"
-                                required="">
-                            <div class="invalid-feedback">
-                                Please enter your shipping address.
-                            </div>
+                      <div class="col">
+                        <label for="validationCustom02" class="form-label">Dewasa</label>
+                        <input type="text" class="form-control" id="last-name" name="dewasa" required>
+                        <div class="valid-feedback">
+                            bagus
                         </div>
-                        <div class="col">
-                            <label for="validationCustom04" class="form-label">State</label>
-                            <select class="form-select" id="state" required>
-                                <option selected disabled value="">Choose...</option>
-                                <option>State 1</option>
-                                <option>State 2</option>
-                                <option>State 3</option>
-                            </select>
-                            <div class="valid-feedback">
-                                Looks good!
-                            </div>
-                            <div class="invalid-feedback">
-                                Please select a valid state.
-                            </div>
+                        <div class="invalid-feedback">
+                            Tolong masukan data
                         </div>
-                        <div class="col">
-                            <label for="validationCustom05" class="form-label">Zip</label>
-                            <input type="text" class="form-control" id="zip" required>
-                            <div class="invalid-feedback">
-                                Please provide a valid zip.
-                            </div>
-                        </div>
+                    </div>
+                    <div class="col">
+                      <label for="validationCustom02" class="form-label">Anak-Anak</label>
+                      <input type="text" class="form-control" id="last-name" name="anak" required>
+                      <div class="valid-feedback">
+                          bagus
+                      </div>
+                      <div class="invalid-feedback">
+                          Tolong masukan data
+                      </div>
+                  </div>
                     </form>
                 </div>
-                <div id="step-4" class="tab-pane" role="tabpanel" aria-labelledby="step-4">
+                <div id="step-4" class="tab-pane" role="tabpanel" aria-labelledby="step-3">
+                    <form id="form-3" class="row row-cols-1 ms-5 me-5 needs-validation" novalidate>
+                      <div class="col">
+                        <label for="validationCustom02" class="form-label">Tujuan</label>
+                        <input type="text" class="form-control" id="last-name" name="tujuan" required>
+                        <div class="valid-feedback">
+                            bagus
+                        </div>
+                        <div class="invalid-feedback">
+                            Tolong masukan data
+                        </div>
+                    </div>
+                    <div class="col">
+                      <label for="validationCustom02" class="form-label">Pemberangkatan</label>
+                      <input type="text" class="form-control" id="last-name" name="pemberangkatan" required>
+                      <div class="valid-feedback">
+                          bagus
+                      </div>
+                      <div class="invalid-feedback">
+                          Tolong masukan data
+                      </div>
+                  </div>
+                    <div class="col">
+                      <label for="validationCustom02" class="form-label">Jam</label>
+                      <input type="time" class="form-control" id="last-name" name="jam" required>
+                      <div class="valid-feedback">
+                          bagus   
+                      </div>
+                      <div class="invalid-feedback">
+                          Tolong masukan data
+                      </div>
+                  </div>
+                    </form>
+                </div>
+                {{-- <div id="step-5" class="tab-pane" role="tabpanel" aria-labelledby="step-4">
 
-                    <form id="form-4" class="row row-cols-1 ms-5 me-5 needs-validation" novalidate>
+                    <form id="form-5" class="row row-cols-1 ms-5 me-5 needs-validation" novalidate>
                         <div class="col">
                             <div class="mb-3 text-muted">Please confirm your order details</div>
 
@@ -214,8 +239,8 @@ Fasilatas                    </a>
 
 
 
-                </div>
-            </div>
+                </div> --}}
+              </form>
 
             <div class="progress">
                 <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0"
@@ -243,7 +268,7 @@ Fasilatas                    </a>
                 </div>
             </div>
         </div>
-    </div>
+      </form>
 
 @endsection
 
