@@ -18,6 +18,7 @@ use App\Http\Controllers\TravelController;
 use App\Http\Controllers\FasilitasController;
 use App\Http\Controllers\DetailHargaController;
 use App\Http\Controllers\DetailTujuanController;
+use App\Http\Controllers\PemesananTravController;
 use App\Http\Controllers\TambahController;
 
 /*
@@ -103,6 +104,7 @@ Route::middleware('auth')->group(function() {
         //travel
         Route::get('travel',[TravelController::class,'travel']);
         //fasilitas
+        Route::get('pemesanan',[PemesananTravController::class,'index']);
         Route::get('fasilitas',[FasilitasController::class, 'fasilitas']);
         //detail_harga
         Route::get('detail_harga',[DetailHargaController::class, 'detail_harga']);
