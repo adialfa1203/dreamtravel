@@ -98,7 +98,7 @@
                                           </div>
                                        </div>
                                     </div>
-                                    <button type="submit" class="btn btn-primary">Masuk</button>
+                                    <button type="submit" class="btn btn-primary">Daftar</button>
                                     <p class="mt-3">
                                        Sudah memiliki akun?<a href="{{url('login')}}" class="text-primary">Masuk</a>
                                     </p>

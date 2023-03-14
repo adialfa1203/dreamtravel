@@ -9,6 +9,6 @@ class pemesanantrav extends Model
 {
     use HasFactory;
     protected $fillable = ['nama','notelp','tujuan','jemput','penumpang','berangkat','pulang'];
-    protected $table = 'pesanan';
+    protected $table = 'pemesanantrav';
     public $timestamps = false;
 }

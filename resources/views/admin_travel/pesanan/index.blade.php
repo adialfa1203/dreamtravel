@@ -355,10 +355,10 @@
                         <tr class="ligth ligth-data">
                             
                             <th class="col-1">No</th>
-                            <th class="col-1">Travel</th>
+                            <th class="col-1">Nama</th>
+                            <th class="col-1">No Telp</th>
                             <th class="col-1">Tujuan</th>
-                            <th class="col-1">Titik Jemput</th>
-                            <th class="col-1">Pengguna</th>
+                            <th class="col-1">Jemput</th>
                             <th class="col-1">Jumlah Penumpang</th>
                             <th class="col-1">Berangkat</th>
                             <th class="col-1">Pulang</th>
@@ -371,10 +371,10 @@
                         
                         <tr>
                             <td>{{ $loop->iteration }}</td>
-                            <td>{{ $item->travel }}</td>
-                            <td>{{ $item->tujuan }}</td>
+                            <td>{{ $item->nama }}</td>
+                            <td>{{ $item->notelp }}</td>
+                            <td>{{ $item->tujuan}}</td>
                             <td>{{ $item->jemput}}</td>
-                            <td>{{ $item->nama}}</td>
                             <td>{{ $item->penumpang}}</td>
                             <td>{{ $item->berangkat}}</td>
                             <td>{{ $item->pulang}}</td>
@@ -467,7 +467,7 @@
                     confirmButtonText: 'Ya, Hapus!'
                     }).then((result) => {
                     if (result.isConfirmed) {
-                        window.location = "/hps/"+pesanid+""
+                        window.location = "/hpus/"+pesanid+""
                         Swal.fire(
                         'Dihapus!',
                         'Data Anda telah dihapus.',

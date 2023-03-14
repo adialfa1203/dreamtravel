@@ -52,7 +52,8 @@ Route::middleware('only_guest')->group(function() {
 
 Route::middleware('auth')->group(function() {
     //pemesanan
-    Route::get('pemesanan', [PenggunaWebController::class, 'indexpesan']);
+    Route::get('pemesanan', [PemesananTravController::class, 'index']);
+    // Route::get('pesanann', [PemesananTravController::class, 'index']);
     //logout
     Route::get('logout', [AuthController::class,'logout']);
     Route::middleware('only_admin')->group(function(){
@@ -105,6 +106,7 @@ Route::middleware('auth')->group(function() {
         Route::get('travel',[TravelController::class,'travel']);
         //fasilitas
         Route::get('pemesanan',[PemesananTravController::class,'index']);
+        Route::get('/hpus/{id}',[PemesananTravController::class,'hpus']);
         Route::get('fasilitas',[FasilitasController::class, 'fasilitas']);
         //detail_harga
         Route::get('detail_harga',[DetailHargaController::class, 'detail_harga']);
