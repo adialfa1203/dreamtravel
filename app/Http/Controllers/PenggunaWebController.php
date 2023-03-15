@@ -37,10 +37,10 @@ class PenggunaWebController extends Controller
         return view ('users.kontak.indexkontak');
     }
 
-    public function indexpesan()
-    {
-        return view ('users.pesan.indexpesan');
-    }   
+    // public function indexpesan()
+    // {
+    //     return view ('users.pesan.indexpesan');
+    // }   
 
     public function indexprofile()
     {

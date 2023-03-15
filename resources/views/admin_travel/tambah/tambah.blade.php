@@ -1,6 +1,9 @@
 @extends('admin_travel.layout.tampilan')
 @section('/tambah', 'active')
 @section('content')
+
+
+
     <div class="container">
 
 
@@ -94,7 +97,7 @@
                     <form id="form-2" class="row row-cols-1 ms-5 me-5 needs-validation" novalidate>
                       <div class="col">
                         <label for="validationCustom02" class="form-label">Fasilitas</label>
-                        <input type="text" class="form-control" id="last-name" name="fasilitas" required>
+                        <input type="text" class="form-control" id="last-name" name=" " required>
                         <div class="valid-feedback">
                             bagus
                         </div>
@@ -176,70 +179,6 @@
                   </div>
                     </form>
                 </div>
-                {{-- <div id="step-5" class="tab-pane" role="tabpanel" aria-labelledby="step-4">
-
-                    <form id="form-5" class="row row-cols-1 ms-5 me-5 needs-validation" novalidate>
-                        <div class="col">
-                            <div class="mb-3 text-muted">Please confirm your order details</div>
-
-                            <div id="order-details"></div>
-
-                            <h4 class="mt-3">Payment</h4>
-                            <hr class="my-2">
-
-                            <div class="row gy-3">
-                                <div class="col-md-3">
-                                    <label for="cc-name" class="form-label">Name on card</label>
-                                    <input type="text" class="form-control" id="cc-name" value="My Name"
-                                        placeholder="" required="">
-                                    <small class="text-muted">Full name as displayed on card</small>
-                                    <div class="invalid-feedback">
-                                        Name on card is required
-                                    </div>
-                                </div>
-
-                                <div class="col-md-3">
-                                    <label for="cc-number" class="form-label">Credit card number</label>
-                                    <input type="text" class="form-control" id="cc-number" value="54545454545454"
-                                        placeholder="" required="">
-                                    <div class="invalid-feedback">
-                                        Credit card number is required
-                                    </div>
-                                </div>
-
-                                <div class="col-md-3">
-                                    <label for="cc-expiration" class="form-label">Expiration</label>
-                                    <input type="text" class="form-control" id="cc-expiration" value="1/28"
-                                        placeholder="" required="">
-                                    <div class="invalid-feedback">
-                                        Expiration date required
-                                    </div>
-                                </div>
-
-                                <div class="col-md-3">
-                                    <label for="cc-cvv" class="form-label">CVV</label>
-                                    <input type="text" class="form-control" id="cc-cvv" value="123"
-                                        placeholder="" required="">
-                                    <div class="invalid-feedback">
-                                        Security code required
-                                    </div>
-                                </div>
-
-                                <div class="col">
-                                  &nbsp;   <input type="checkbox" class="form-check-input" id="save-info" required>
-                                  &nbsp;&nbsp; <label class="form-check-label" for="save-info">I agree to the terms and
-                                        conditions</label>
-                                </div>
-
-                                
-
-                            </div>
-                        </div>
-                    </form>
-
-
-
-                </div> --}}
               </form>
 
             <div class="progress">

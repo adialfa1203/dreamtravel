@@ -16,6 +16,8 @@
       <link rel="stylesheet" href="{{ asset ('E5 (1)\E5/templates.iqonic.design/lite/posdash/html/assets/vendor/%40fortawesome/fontawesome-free/css/all.min.css')}}">
       <link rel="stylesheet" href="{{ asset ('E5 (1)\E5/templates.iqonic.design/lite/posdash/html/assets/vendor/line-awesome/dist/line-awesome/css/line-awesome.min.css')}}">
       <link rel="stylesheet" href="{{ asset ('E5 (1)\E5/templates.iqonic.design/lite/posdash/html/assets/vendor/remixicon/fonts/remixicon.css')}}">  
+      {{-- <link rel="stylesheet" href="{{ asset ('dreamtravel/resources/css/smart.css')}}">
+     <script src="{{ asset ('dreamtravel/resources/js/smart.js')}}"></script> --}}
     <!-- Google Tag Manager -->
 
 
