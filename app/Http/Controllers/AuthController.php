@@ -71,11 +71,11 @@ class  AuthController extends Controller
     public function registerProcess(Request $request)
     {
        $request->validate([
-            'nama' => 'required|max:255',
+            'nama' => 'required|min:2|max:255',
             'email' => 'required|unique:users|max:255',
-            'password' => 'required',
-            'alamat' => 'required|max:255',
-            'no' => 'max:255',
+            'password' => 'required|min:8|max:32',
+            'alamat' => 'required|min:4|max:255',
+            'no' => 'required|min:11|max:255',
             'tanggal' => 'required|max:255',
         ],[
             // 'password.same' => 'Konfirmasi Password Tidak Sesuai',

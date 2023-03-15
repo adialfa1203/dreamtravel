@@ -150,7 +150,7 @@
                                 <h3 class="mb-0">AkunKU</h3>
                             </div>
                             <div class="col-4 text-right">
-                                <a href="editprofile" class="btn btn-sm btn-primary">Ubah Akun</a>
+                                <a href="editprofile" class="btn btn-sm btn-primary">Edit Akun</a>
                             </div>
                         </div>
                     </div>
