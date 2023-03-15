@@ -15,14 +15,14 @@ class User extends Seeder
     public function run(): void
     {
         DB::table('users')->insert([
-            'nama' => ('K'),
-            'email' => ('K@gmail.com'),
-            'password' => ('Kotlokot'),
+            'nama' => ('Kotlokot'),
+            'email' => ('kotlokot@gmail.com'),
+            'password' => ('Kotlokot123'),
             'alamat' => ('Kotlokott'),
             'no' => ('123'),
             'tanggal' => Carbon::now(1),
             'status' => ('Active'),
-            // 'role_id' => ('3')
+            'role_id' => ('3')
         ]);
     }
 }

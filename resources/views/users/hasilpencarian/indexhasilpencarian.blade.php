@@ -158,7 +158,7 @@
               </div>
             </div>
 
-          </div>
+          </div><br>
           <!-- ! Recomended item-->
           <!-- Recomended item-->
           <div class="card">
@@ -230,7 +230,7 @@
               </div>
             </div>
 
-          </div>
+          </div><br>
           <!-- ! Recomended item-->
           <!-- Recomended item-->
           <div class="card">
@@ -371,7 +371,7 @@
               </div>
             </div>
 
-          </div>
+          </div><br>
           <!-- ! Recomended item-->
           <!-- Recomended item-->
           <div class="card">
@@ -443,7 +443,7 @@
               </div>
             </div>
 
-          </div>
+          </div><br>
           <!-- ! Recomended item-->
           <!-- Recomended item-->
           <div class="card">

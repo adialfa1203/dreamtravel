@@ -31,11 +31,11 @@
       <section class="login-content">
          <div class="container">
             <div class="row align-items-center flex-column justify-content-center height-self-center">
-               @if (session('status'))
+               {{-- @if (session('status'))
                <div class="alert alert-danger">
                   {{ session('message')}}
                </div>
-               @endif
+               @endif --}}
                <div class="col-lg-8">
                   <div class="card auth-card">
                      <div class="card-body p-0">
@@ -61,6 +61,11 @@
                                              <input type="password" placeholder="Password" name="password" id="password" class="form-control form-control-lg" required/>
                                           </div>
                                        </div>
+                                       @if (session('status'))
+                                          <div class="alert alert-danger">
+                                             {{ session('message')}}
+                                          </div>
+                                       @endif
                                        <div class="col-lg-6">
                                           <div class="custom-control custom-checkbox mb-3">
                                              <input type="checkbox" class="custom-control-input" id="customCheck1">
@@ -68,14 +73,14 @@
                                           </div>
                                        </div>
                                        <div class="col-lg-6">
-                                          <a href="auth-recoverpw.html" class="text-primary float-right">Lupa password?</a>
+                                          <a href="auth-recoverpw.html" class="text-primary float-right">Lupa password ?</a>
                                        </div>
                                     </div>
                                     <a href="">
                                        <button type="submit" class="btn btn-primary">Masuk</button>
                                     </a>
                                     <p class="mt-3">
-                                       Buat sebuah akun <a href="{{url('register')}}" class="text-primary">Daftar</a>
+                                       Belum punya Akun ? <a href="{{url('register')}}" class="text-primary">Daftar Sekarang !</a>
                                     </p>
                                  </form>
                               </div>

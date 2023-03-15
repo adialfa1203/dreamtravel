@@ -2,11 +2,11 @@
 @section('content')
 <div class="main-content">
     <!-- Top navbar -->
-    <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
-        <div class="container-fluid">
+    {{-- <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+        <div class="container-fluid"> --}}
             <!-- Brand -->
-            <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block"
-                href="https://www.creative-tim.com/product/argon-dashboard" target="_blank">Profil Pengguna</a>
+            {{-- <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block"
+                href="https://www.creative-tim.com/product/argon-dashboard" target="_blank">Profil Pengguna</a> --}}
             <!-- Form -->
             <!-- <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
                     <div class="form-group mb-0">
@@ -19,7 +19,7 @@
                     </div>
                 </form> -->
             <!-- User -->
-            <ul class="navbar-nav align-items-center d-none d-md-flex">
+            {{-- <ul class="navbar-nav align-items-center d-none d-md-flex">
                 <li class="nav-item dropdown">
                     <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
@@ -29,7 +29,7 @@
                                     src="https://demos.creative-tim.com/argon-dashboard/assets-old/img/theme/team-4.jpg">
                             </span>
                             <div class="media-body ml-2 d-none d-lg-block">
-                                <span class="mb-0 text-sm  font-weight-bold">Jessica Jones</span>
+                                <span class="mb-0 text-sm  font-weight-bold"></span>
                             </div>
                         </div>
                     </a>
@@ -60,9 +60,9 @@
                         </a>
                     </div>
                 </li>
-            </ul>
-        </div>
-    </nav>
+            </ul> --}}
+        {{-- </div>
+    </nav> --}}
     <!-- Header -->
     <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="background-color: #ffc107;">
         <!-- style="min-height: 600px; background-image: url(https://raw.githubusercontent.com/creativetimofficial/argon-dashboard/gh-pages/assets-old/img/theme/profile-cover.jpg); background-size: cover; background-position: center top;" -->
@@ -72,7 +72,7 @@
         <div class="container-fluid d-flex align-items-center">
             <div class="row">
                 <div class="col-lg-7 col-md-10">
-                    <h1 class="display-2 text-white">Haii Jesse</h1>
+                    <h1 class="display-2 text-white">Haii {{ Auth::user()->nama }}</h1>
                     <p class="text-white mt-0 mb-5">Ini adalah halaman profil Anda. Anda dapat Mengubah, Keluar atau
                         Menghapus akun anda disini .
                     </p>
@@ -90,22 +90,22 @@
                         <div class="col-lg-3 order-lg-2">
                             <div class="card-profile-image">
                                 <a href="#">
-                                    <img src="https://demos.creative-tim.com/argon-dashboard/assets-old/img/theme/team-4.jpg"
+                                    <img src="{{ asset('img/'.Auth::user()->foto) }}"
                                         class="rounded-circle">
                                 </a>
                             </div>
                         </div>
-                    </div>
+                    </div><br>
                     <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
-                        <div class="d-flex justify-content-between">
+                        {{-- <div class="d-flex justify-content-between">
                             <a href="login.html" class="btn btn-sm btn-info mr-4">Keluar</a>
                             <a href="#" class="btn btn-sm btn-danger float-right">Hapus Akun</a>
-                        </div>
+                        </div> --}}
                     </div>
                     <div class="card-body pt-0 pt-md-4"><br><br><br>
                         <div class="text-center ">
                             <h3>
-                                Jessica Jones<span class="font-weight-light">, 27</span>
+                                {{ Auth::user()->nama }}<span class="font-weight-light"></span>
                             </h3>
                             <!-- <div class="h5 font-weight-300">
                                     <i class="ni location_pin mr-2"></i>Bucharest, Romania
@@ -150,7 +150,7 @@
                                 <h3 class="mb-0">AkunKU</h3>
                             </div>
                             <div class="col-4 text-right">
-                                <a href="profile/1" class="btn btn-sm btn-primary">Ubah Akun</a>
+                                <a href="editprofile" class="btn btn-sm btn-primary">Ubah Akun</a>
                             </div>
                         </div>
                     </div>
@@ -159,20 +159,20 @@
                             <h6 class="heading-small text-muted mb-4">Informasi Pengguna</h6>
                             <div class="pl-lg-4">
                                 <div class="row">
-                                    <div class="col-lg-6">
+                                    <div class="col-lg-12">
                                         <div class="form-group focused">
                                             <label class="form-control-label" for="input-username">Nama</label>
                                             <input type="email" id="input-username"
                                                 class="form-control form-control-alternative" placeholder="Username"
-                                                value="{{ $users->nama }}" readonly>
+                                                value="{{ Auth::user()->nama }}" readonly>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group focused">
-                                            <label class="form-control-label" for="input-tanggallahir">Usia</label>
+                                            <label class="form-control-label" for="input-tanggallahir">Tanggal Lahir</label>
                                             <input type="email" id="input-tanggallahir"
                                                 class="form-control form-control-alternative"
-                                                placeholder="Tanggal Lahir" value="{{ $users->tanggal }}" readonly>
+                                                placeholder="Tanggal Lahir" value="{{ Auth::user()->tanggal }}" readonly>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
@@ -180,17 +180,17 @@
                                             <label class="form-control-label" for="input-email">Email</label>
                                             <input type="email" id="input-email"
                                                 class="form-control form-control-alternative"
-                                                placeholder="jesse@example.com" value="{{ $users->email }}" readonly>
+                                                placeholder="jesse@example.com" value="{{ Auth::user()->email }}" readonly>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6">
+                                    {{-- <div class="col-lg-6">
                                         <div class="form-group focused">
                                             <label class="form-control-label" for="input-password">Password</label>
                                             <input type="email" id="input-password"
                                                 class="form-control form-control-alternative" placeholder="Password"
-                                                value="{{ $users->password }}" readonly>
+                                                value="{{ Auth::user()->password }}" readonly>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                 </div>
                                 <!-- <div class="row">
                                         <div class="col-lg-6">
@@ -222,7 +222,7 @@
                                         <div class="form-group focused">
                                             <label class="form-control-label" for="input-address">Alamat</label>
                                             <input id="input-address" class="form-control form-control-alternative"
-                                                placeholder="Home Address" value="{{ $users->alamat }}" type="email" readonly>
+                                                placeholder="Home Address" value="{{ Auth::user()->alamat }}" type="email" readonly>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -230,7 +230,7 @@
                                             <label class="form-control-label" for="input-nomortelepon">Nomor
                                                 Telepon</label>
                                             <input id="input-nomortelepon" class="form-control form-control-alternative"
-                                                placeholder="Nomor Telepon" value="{{ $users->no }}" type="email" readonly>
+                                                placeholder="Nomor Telepon" value="{{ Auth::user()->no }}" type="email" readonly>
                                         </div>
                                     </div>
                                 </div>
