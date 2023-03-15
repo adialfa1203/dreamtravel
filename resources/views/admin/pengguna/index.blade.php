@@ -351,7 +351,7 @@
                     <thead class="bg-white text-uppercase">
                         <tr class="ligth ligth-data">
 
-                              <th>No</th>
+                              <th>Id</th>
                               <th>Nama</th>
                               <th>No Telepon</th>
                               <th>Alamat</th>
@@ -364,12 +364,12 @@
                             @foreach ($data as $item)
                             
                         <tr>
-                            <td>{{ $loop->iteration }}</td>
+                            <td>{{ $item->id }}</td>
                             <td>{{ $item->nama }}</td>
-                            <td>{{ $item->notelp }}</td>
+                            <td>{{ $item->no }}</td>
                             <td>{{ $item->alamat}}</td>
                             <td>{{ $item->email}}</td>
-                            <td>{{ $item->tgllahir}}</td>
+                            <td>{{ $item->tanggal}}</td>
                             {{-- <td>
                                 @if ($item->foto)
                                     <img style="max-width:80px; max-height:80px" 
