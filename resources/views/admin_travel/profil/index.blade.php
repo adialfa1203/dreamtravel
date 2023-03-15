@@ -290,11 +290,11 @@
                                                      class="rounded profile-img img-fluid avatar-70">
                                              </div>
                                              <div class="p-3">
-                                               <h5 class="mb-1">{{ Auth::user()->nama }}</h5>
-                                               <p class="mb-0"></p>
+                                               <h5 class="mb-1">Who Me</h5>
+                                               <p class="mb-0">Sejak 10 maret, 2020</p>
                                                <div class="d-flex align-items-center justify-content-center mt-3">
                                                    <a href="{{url('profil')}}" class="btn border mr-2">Profil</a>
-                                                   <a href="{{ url('logout') }}" class="btn border">Keluar</a>
+                                                   <a href="auth-sign-in.html" class="btn border">Keluar</a>
                                                </div>
                                            </div>
                                          </div>
@@ -352,7 +352,7 @@
                         </div>
                         <div class="ml-3">
                            <h4 class="mb-1">{{ Auth::user()->nama }}</h4>
-                           <p class="mb-2"></p>
+                           <p class="mb-2">Human Resource Development</p>
                            <a href="{{url('edit')}}" class="btn btn-primary font-size-14">Edit Profil</a>
                         </div>
                      </div>

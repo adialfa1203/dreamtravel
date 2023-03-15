@@ -67,12 +67,13 @@ Route::middleware('auth')->group(function() {
         Route::get('admin', function () {
             return view('admin.beranda.index');
         })->middleware(['auth', 'only_admin']);
-        Route::get('profil', function () {
+        Route::get('/profil', function () {
             return view('admin.profil.index');
         });
         Route::get('edit', function () {
             return view('admin.profil.edit');
         });
+        Route::post('/updatee/{id}', [PenggunaWebController::class, 'updatee']);
         Route::get('pesan', function () {
             return view('admin.pesan-navbar.index');
         });

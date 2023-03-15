@@ -346,12 +346,12 @@
       
                       </a>
                   </div>
-                  {{-- <div class="iq-search-bar device-search">
+                  <div class="iq-search-bar device-search">
                       <form action="#" class="searchbox">
                           <a class="search-link" href="#"><i class="ri-search-line"></i></a>
                           <input type="text" class="text search-input" placeholder="Search here...">
                       </form>
-                  </div> --}}
+                  </div>
                   <div class="d-flex align-items-center">
                       <button class="navbar-toggler" type="button" data-toggle="collapse"
                           data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -396,7 +396,7 @@
                         </div>
                      </div>
                      <div class="card-body">
-                        
+                        <form>
                            <div class="form-group">
                               <div class="crm-profile-img-edit position-relative">
                                  <img class="crm-profile-pic rounded avatar-100" src="../assets/images/user/Ajg.jpg" alt="profile-pic">
@@ -414,12 +414,12 @@
                                  <span> Diperbolehkan</span>
                               </div>
                               <div class="new-user-info">
-                                <form action="/updatee/{{ Auth::user()->id }}" method="POST" enctype="multipart/form-data">
+                                <form action="/update/{{ Auth::user()->id }}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                    <div class="row">
                                       <div class="form-group col-md-12">
                                          <label for="fname">Nama :</label>
-                                         <input type="text" class="form-control" id="fname" placeholder="Nama" name="nama" value="{{ Auth::user()->nama }}">
+                                         <input type="text" class="form-control" id="fname" placeholder="Nama" value="{{ Auth::user()->nama }}">
                                       </div>
                                       {{-- <div class="form-group col-md-6">
                                          <label for="add1">Status:</label>
@@ -427,19 +427,19 @@
                                       </div> --}}
                                       <div class="form-group col-md-6">
                                          <label for="add2">Alamat :</label>
-                                         <input type="text" class="form-control" id="add2" placeholder="Kota" name="alamat" value="{{ Auth::user()->alamat }}">
+                                         <input type="text" class="form-control" id="add2" placeholder="Kota" value="{{ Auth::user()->alamat }}">
                                       </div>
                                       <div class="form-group col-md-6">
                                          <label for="cname">Tanggal Lahir :</label>
-                                         <input type="date" class="form-control" id="cname" value="{{ Auth::user()->tanggal }}" name="tanggal">
+                                         <input type="date" class="form-control" id="cname" value="{{ Auth::user()->tanggal }}">
                                       </div>
                                       <div class="form-group col-md-6">
                                         <label for="email">Email :</label>
-                                        <input type="email" class="form-control" id="email" placeholder="Email" value="{{ Auth::user()->email }}" name="email">
+                                        <input type="email" class="form-control" id="email" placeholder="Email" value="{{ Auth::user()->email }}">
                                      </div>
                                       <div class="form-group col-md-6">
                                          <label for="mobno">Nomor Telepon :</label>
-                                         <input type="text" class="form-control" id="mobno" placeholder="Nomor Telepon" value="{{ Auth::user()->no }}" name="no">
+                                         <input type="text" class="form-control" id="mobno" placeholder="Nomor Telepon" value="{{ Auth::user()->no }}">
                                       </div>
                                       {{-- <div class="form-group col-md-6">
                                          <label for="city">Negara:</label>
@@ -464,13 +464,12 @@
                                          <input type="password" class="form-control" id="pass" placeholder="Password">
                                       </div>
                                    </div> --}}
-                                   <button type="submit" class="btn btn-primary">Simpan</button>
-                                   <a href="{{ url('profil') }}" class="btn btn-close">Kembali</a>
+                                   <button type="submit" class="btn btn-primary">Ubah</button>
                                 </form>
                              </div>
                            </div>
                            </div>
-                           
+                        </form>
                      </div>
                   </div>
             </div>

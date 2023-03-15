@@ -101,7 +101,7 @@
 					@endif
                                     <button type="submit" class="btn btn-primary">Daftar</button>
                                     <p class="mt-3">
-                                       Sudah memiliki Akun ?<a href="{{url('login')}}" class="text-primary">Masuk</a>
+                                       Sudah memiliki Akun ?<a href="{{url('login')}}" class="text-primary"> Masuk !</a>
                                     </p>
                                  </form>
                               </div>

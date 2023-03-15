@@ -79,4 +79,21 @@ class PenggunaWebController extends Controller
         return redirect('profile');
     }
 
+    public function updatee(Request $request,$id)
+    {
+        $validateddata=$request->validate([
+            'email'=>'required|unique:users,email,'.$request->id.',id',
+            'nama'=>'required',
+            'alamat'=>'required',
+            'tanggal'=>'required',
+            'no'=>'required',
+            // 'password'=>'required'
+            // 'status'=>'required|unique:users,status'.$request->id.',id',
+            // 'email'=>'required|unique:users,email'.$request->id.',id'
+        ]);
+        $data = User::find($id);
+        $data->update($request->all());
+        return redirect('/profil');
+    }
+
 }
