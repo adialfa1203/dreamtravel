@@ -13,7 +13,7 @@ class PenggunaController extends Controller
             $data = pengguna::orderBy('id','desc')->get();
         
        
-        return view ('admin.pengguna.index')->with('data', $data);
+        return view ('admin.pengguna.index')->with('data', $data);  
     }
     
     // public function update( $id)

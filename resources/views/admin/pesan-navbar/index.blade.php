@@ -292,7 +292,7 @@
                                               <p class="mb-0">Sejak 10 maret, 2020</p>
                                               <div class="d-flex align-items-center justify-content-center mt-3">
                                                   <a href="{{url('profil')}}" class="btn border mr-2">Profil</a>
-                                                  <a href="auth-sign-in.html" class="btn border">Keluar</a>
+                                                  <a href="{{ url('logout')}}" class="btn border">Keluar</a>
                                               </div>
                                           </div>
                                         </div>
