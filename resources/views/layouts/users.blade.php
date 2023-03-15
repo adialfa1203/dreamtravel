@@ -52,9 +52,9 @@
               <!-- <a class="nav-link pr-0" href="profile.html" role="button" data-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false"> -->
               <!-- <div class="media align-items-center"> -->
-              <a href="/profile/1"><span class="avatar avatar-sm">
+              <a href="/profile"><span class="avatar avatar-sm mt-10">
                   <img class="rounded-circle" alt="Image placeholder"
-                    src="https://demos.creative-tim.com/argon-dashboard/assets-old/img/theme/team-4.jpg"
+                    src="{{ asset('img/default.png') }}"
                     style="width: 25px; height: auto;">
                 </span></a>
 

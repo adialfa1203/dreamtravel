@@ -31,20 +31,6 @@
       <section class="login-content">
          <div class="container">
             <div class="row align-items-center flex-column justify-content-center height-self-center">
-               @if ($errors->any())
-					<div class="alert alert-danger">
-						<ul>
-							@foreach ($errors->all() as $error)
-								<li>{{$error}}</li>
-							@endforeach
-						</ul>
-					</div>
-					@endif
-					@if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('message') }}
-                        </div>
-                    @endif
                <div class="col-lg-8">
                   <div class="card auth-card">
                      <div class="card-body p-0">
@@ -53,6 +39,12 @@
                               <div class="p-3">
                                  <h2 class="mb-2">Daftar</h2>
                                  <p>Buat akun Anda.</p>
+                                 @if (session('status'))
+                                    <div class="alert alert-success">
+                                        {{ session('message') }}
+                                    </div>
+                                 @endif
+                                 
                                  <form>
                                     <div class="row">
                                        <div class="col-lg-6">Nama
@@ -98,9 +90,18 @@
                                           </div>
                                        </div>
                                     </div>
-                                    <button type="submit" class="btn btn-primary">Masuk</button>
+                                    @if ($errors->any())
+					<div class="alert alert-danger">
+						<ul>
+							@foreach ($errors->all() as $error)
+								<li>{{$error}}</li>
+							@endforeach
+						</ul>
+					</div>
+					@endif
+                                    <button type="submit" class="btn btn-primary">Daftar</button>
                                     <p class="mt-3">
-                                       Sudah memiliki akun?<a href="{{url('login')}}" class="text-primary">Masuk</a>
+                                       Sudah memiliki Akun ?<a href="{{url('login')}}" class="text-primary">Masuk</a>
                                     </p>
                                  </form>
                               </div>

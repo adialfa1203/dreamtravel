@@ -33,7 +33,6 @@ use App\Http\Controllers\TambahController;
 //halaman utama
 Route::get('/', [PenggunaWebController::class, 'indexhasilpencarian']);
 Route::get('hasilpencarian',[PenggunaWebController::class,'indexhasilpencarian']);
-Route::get('profile', [PenggunaWebController::class, 'indexprofile']);
 Route::get('tentangkami', [PenggunaWebController::class, 'indextentangkami']);
 Route::get('detailkendaraan', [PenggunaWebController::class, 'indexdetailkendaraan']);
 Route::get('faq', [PenggunaWebController::class, 'indexfaq']);
@@ -54,6 +53,13 @@ Route::middleware('auth')->group(function() {
     Route::get('pemesanan', [PenggunaWebController::class, 'indexpesan']);
     //logout
     Route::get('logout', [AuthController::class,'logout']);
+
+    // profile
+
+    Route::get('profile', [PenggunaWebController::class, 'indexprofile'])->name('profile');
+    Route::get('editprofile', [PenggunaWebController::class, 'editprofile']);
+    Route::post('/update/{id}', [PenggunaWebController::class, 'update']);
+    
     Route::middleware('only_admin')->group(function(){
         //admin
         Route::get('admin', function () {
@@ -91,6 +97,10 @@ Route::middleware('auth')->group(function() {
         Route::get('/hps/{id}',[PesananController::class,'hps'])->name('hps');
         
         //logout
+
+        // profile
+
+        
        
         //halaaman percobaan
         //test faq
