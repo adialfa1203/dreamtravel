@@ -8,6 +8,10 @@ use Illuminate\Http\Request;
 
 class PemesananTravController extends Controller
 {
+    public function pemesanan()
+    {
+        return view('users.pesan.indexpesan');
+    }
     public function index()
     {
         

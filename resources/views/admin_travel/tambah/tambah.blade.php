@@ -37,7 +37,7 @@
                 </li>
             </ul>
 
-            <div class="tab-content">
+            <div class="tab-content" style="height: 800.594px;">
                 <div id="step-1" class="tab-pane" role="tabpanel" aria-labelledby="step-1">
                     <form id="form-1" class="row row-cols-1 ms-5 me-5 needs-validation" novalidate>
                         <div class="col">

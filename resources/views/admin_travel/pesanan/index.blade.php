@@ -38,33 +38,51 @@
             <nav class="iq-sidebar-menu">
                 <ul id="iq-sidebar-toggle" class="iq-menu">
                     <li class="">
-                        <a href="{{url('admin')}}" class="svg-icon">                        
+                        <a href="{{url('beranda_travel')}}" class="svg-icon">                        
                             <svg  class="svg-icon" id="p-dash1" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line>
                             </svg>
                             <span class="ml-4">Beranda</span>
                         </a>
                     </li>
-                    <li class=" ">
-                      <a href="{{url('pengguna')}}" class="">
-                          <svg class="svg-icon" id="p-dash8" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                          </svg>
-                          <span class="ml-4">Data Pengguna</span>
-                      </a>
-                      <ul id="table" class="iq-submenu collapse" data-parent="#otherpage">                               
+                    <li class="">
+                        <a href="#product" class="collapsed" data-toggle="collapse" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bus-front-fill" viewBox="0 0 16 16">
+                                <path d="M16 7a1 1 0 0 1-1 1v3.5c0 .818-.393 1.544-1 2v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5V14H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2a2.496 2.496 0 0 1-1-2V8a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1V2.64C1 1.452 1.845.408 3.064.268A43.608 43.608 0 0 1 8 0c2.1 0 3.792.136 4.936.268C14.155.408 15 1.452 15 2.64V4a1 1 0 0 1 1 1v2ZM3.552 3.22A43.306 43.306 0 0 1 8 3c1.837 0 3.353.107 4.448.22a.5.5 0 0 0 .104-.994A44.304 44.304 0 0 0 8 2c-1.876 0-3.426.109-4.552.226a.5.5 0 1 0 .104.994ZM8 4c-1.876 0-3.426.109-4.552.226A.5.5 0 0 0 3 4.723v3.554a.5.5 0 0 0 .448.497C4.574 8.891 6.124 9 8 9c1.876 0 3.426-.109 4.552-.226A.5.5 0 0 0 13 8.277V4.723a.5.5 0 0 0-.448-.497A44.304 44.304 0 0 0 8 4Zm-3 7a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm8 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm-7 0a1 1 0 0 0 1 1h2a1 1 0 1 0 0-2H7a1 1 0 0 0-1 1Z"/>
+                              </svg>
+                            <span class="ml-4">Travel</span>
+                            <svg class="svg-icon iq-arrow-right arrow-active" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="10 15 15 20 20 15"></polyline><path d="M4 4h7a4 4 0 0 1 4 4v12"></path>
+                            </svg>
+                        </a>
+                        <ul id="product" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                            <li class="submenu @yield('/tambah')">
+                                <a href="/tambah">
+                                    <i class="las la-minus"></i><span>Tambah Data</span>
+                                </a>
+                            </li>
+                            <li class="submenu @yield('/travel')">
+                                <a href="/travel">
+                                    <i class="las la-minus"></i><span>Travel</span>
+                                </a>
+                            </li>
+                            <li class="submenu @yield('/fasilitas')">
+                                <a href="/fasilitas">
+                                    <i class="las la-minus"></i><span>Fasilitas Travel</span>
+                                </a>
+                            </li>
+                            <li class="submenu @yield('/detail_harga')">
+                                <a href="/detail_harga">
+                                    <i class="las la-minus"></i><span>Detail Harga</span>
+                                </a>
+                            </li>
+                            <li class="submenu @yield('/detail_tujuan')">
+                                <a href="/detail_tujuan">
+                                    <i class="las la-minus"></i><span>Detail Tujuan</span>
+                                </a>
+                            </li>
                         </ul>
                     </li>
-                    <li class="">
-                        <a href="{{url('pemilik')}}" class="">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-                                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
-                              </svg>
-                            <span class="ml-4">Pemilik Travel</span>
-                        </a>
-                        <ul id="table" class="iq-submenu collapse" data-parent="#otherpage">
-                        </ul>
-                         </li>
                        
                     <li class="">
                       <a href="{{url('pesanan')}}" class="">

@@ -52,8 +52,8 @@ Route::middleware('only_guest')->group(function() {
 
 Route::middleware('auth')->group(function() {
     //pemesanan
-    Route::get('pemesanan', [PemesananTravController::class, 'index']);
-    // Route::get('pesanann', [PemesananTravController::class, 'index']);
+    Route::get('pemesanan', [PemesananTravController::class, 'pemesanan']);
+    Route::post('pemesanan', [PemesananTravController::class, 'pemesananproses']);
     //logout
     Route::get('logout', [AuthController::class,'logout']);
     Route::middleware('only_admin')->group(function(){
@@ -105,8 +105,6 @@ Route::middleware('auth')->group(function() {
         //travel
         Route::get('travel',[TravelController::class,'travel']);
         //fasilitas
-        Route::get('pemesanan',[PemesananTravController::class,'index']);
-        Route::get('/hpus/{id}',[PemesananTravController::class,'hpus']);
         Route::get('fasilitas',[FasilitasController::class, 'fasilitas']);
         //detail_harga
         Route::get('detail_harga',[DetailHargaController::class, 'detail_harga']);
@@ -114,6 +112,9 @@ Route::middleware('auth')->group(function() {
         Route::get('detail_tujuan',[DetailTujuanController::class, 'detail_tujuan']);
         //tambah
         Route::get('tambah',[TambahController::class, 'tambah'])->name('tambah');
+        //pesanan
+        Route::get('pesanan',[PemesananTravController::class,'index']);
+        Route::get('/hpus/{id}',[PemesananTravController::class,'hpus']);
     });
     });
 
