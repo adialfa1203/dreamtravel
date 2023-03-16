@@ -1,8 +1,14 @@
 @extends('admin_travel.layout.tampilan')
 @section('/tambah', 'active')
 @section('content')
-
-
+<head>
+    <input[type="number"] {
+        appearance: textfield;
+        -webkit-appearance: textfield;
+        -moz-appearance: textfield;
+    }>
+</head>
+<body>
 
     <div class="container">
 
@@ -37,7 +43,7 @@
                 </li>
             </ul>
 
-            <div class="tab-content">
+            <div class="tab-content overflow-y-scroll" id="tab-konten" style="height: auto">
                 <div id="step-1" class="tab-pane" role="tabpanel" aria-labelledby="step-1">
                     <form id="form-1" class="row row-cols-1 ms-5 me-5 needs-validation" novalidate>
                         <div class="col">
@@ -84,94 +90,25 @@
                 </div>
                 <div id="step-2" class="tab-pane" role="tabpanel" aria-labelledby="step-2">
                     <form id="form-2" class="row row-cols-1 ms-5 me-5 needs-validation" novalidate>
-                      <div class="col">
-                        <label for="validationCustom02" class="form-label">Selimut</label>
-                            <select class="form-control" name="jurusan">
-                                <option value=""></option>
-                                <option value="Ada">Ada</option>
-                                <option value="Tidak Ada ">Tidak Ada</option>
-                            </select>
-                        {{-- <div class="valid-feedback">
-                            bagus
-                        </div>
-                        <div class="invalid-feedback">
-                            Tolong masukan data
-                        </div> --}}
-                    </div>
-                      <div class="col">
-                        <label for="validationCustom02" class="form-label">TV</label>
-                            <select class="form-control" name="jurusan">
-                                <option value="Ada">Ada</option>
-                                <option value="Tidak Ada ">Tidak Ada</option>
-                            </select>
-                        {{-- <div class="valid-feedback">
-                            bagus
-                        </div>
-                        <div class="invalid-feedback">
-                            Tolong masukan data
-                        </div> --}}
-                    </div>
-                      <div class="col">
-                        <label for="validationCustom02" class="form-label">WiFi</label>
-                            <select class="form-control" name="jurusan">
-                                <option value="Ada">Ada</option>
-                                <option value="Tidak Ada ">Tidak Ada</option>
-                            </select>
-                        {{-- <div class="valid-feedback">
-                            bagus
-                        </div>
-                        <div class="invalid-feedback">
-                            Tolong masukan data
-                        </div> --}}
-                    </div>
-                      <div class="col">
-                        <label for="validationCustom02" class="form-label">Bagasi</label>
-                        <input type="number" class="form-con    trol" placeholder="KG" id="first-name" name="id_plat" required>
-                        <div class="valid-feedback">
-                            bagus
-                        </div>
-                        <div class="invalid-feedback">
-                            Tolong masukan data
-                        </div>
-                    </div>
-                      <div class="col">
-                        <label for="validationCustom02" class="form-label">Makan</label>
-                        <div class="col-sm-10">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="kelas" id="kelas" value="10">
-                                <label class="form-check-label" for="1">1 Kali</label>
+                        
+                            <div class="customer_records">
+                                <div class="col">
+                                    <label for="validationCustom02" class="form-label">Dewasa</label>
+                                    <input type="text" class="form-control" id="last-name" name="dewasa" required>
+                                </div>
+                              
+                          
+                              <a class="extra-fields-customer" href="#">Add More Customer</a>
                             </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="kelas" id="kelas" value="11">
-                                <label class="form-check-label" for="kelas">2 Kali</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="kelas" id="kelas" value="12">
-                                <label class="form-check-label" for="kelas">3 Kali</label>
-                            </div>
-                        </div>
-                        <div class="valid-feedback">
-                            bagus
-                        </div>
-                        <div class="invalid-feedback">
-                            Tolong masukan data
-                        </div>
-                    </div>
-                  
-                  {{-- <button type="button" onclick="addInput()" class="btn btn-primary" >Tambah</button> --}}
+                          
+                            <div class="customer_records_dynamic"></div>
                     </form>
                 </div>
                 <div id="step-3" class="tab-pane" role="tabpanel" aria-labelledby="step-3">
                     <form id="form-3" class="row row-cols-1 ms-5 me-5 needs-validation" novalidate>
-                      <div class="col">
+                    <div class="col">
                         <label for="validationCustom02" class="form-label">Dewasa</label>
                         <input type="text" class="form-control" id="last-name" name="dewasa" required>
-                        {{-- <div class="valid-feedback">
-                            bagus           
-                        </div>
-                        <div class="invalid-feedback">
-                            Tolong masukan data
-                        </div> --}}
                     </div>
                     <div class="col">
                       <label for="validationCustom02" class="form-label">Anak-Anak</label>
@@ -422,6 +359,7 @@ $(function() {
 function addInput() {
         const container = document.getElementById("form-2");
         const inputDiv = document.createElement("col");
+  
         inputDiv.innerHTML = `
        
                    
@@ -449,8 +387,30 @@ function addInput() {
                 
         `;  
         container.appendChild(inputDiv);
+        document.getElementById('tab-konten').style.height = "auto"
       }
-
-    
     </script>
+    <script>
+    $('.extra-fields-customer').click(function() {
+  $('.customer_records').clone().appendTo('.customer_records_dynamic');
+  $('.customer_records_dynamic .customer_records').addClass('single remove');
+  $('.single .extra-fields-customer').remove();
+  $('.single').append('<a href="#" class="remove-field btn-remove-customer">Remove Customer</a>');
+  $('.customer_records_dynamic > .single').attr("class", "remove");
+  
+  $('.customer_records_dynamic input').each(function() {
+    var count = 0;
+    var fieldname = $(this).attr("name");
+    $(this).attr('name', fieldname + count );
+    count++;
+  });
+
+});
+
+$(document).on('click', '.remove-field', function(e) {
+  $(this).parent('.remove').remove();
+  e.preventDefault();
+});
+    </script>
+</body>
  @endsection
