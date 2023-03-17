@@ -23,13 +23,9 @@
             <table class="data-tables table mb-0 tbl-server-info">
                 <thead class="bg-white text-uppercase">
                     <tr class="ligth light-data">
-                        <th class="text-center">#</th>
+                        <th class="text-center">No</th>
                         <th>No Plat</th>
-                        <th>Selimut</th>
-                        <th>TV</th>
-                        <th>Wifi</th>
-                        <th>Bagasi(kg)</th>
-                        <th>Makan</th>
+                        <th>Nama Fasilitas</th>
                         <th>Tanggal dibuat</th>
                         <th class="text-center">Aksi</th>
                     </tr>
@@ -42,11 +38,7 @@
                     <tr>
                         <td scope="row">{{ $no++ }}</td>
                         <td>{{ $row->travels->id_plat }}</td>
-                        <td>{{ $row->selimut }}</td>
-                        <td>{{ $row->tv }}</td>
-                        <td>{{ $row->wifi }}</td>
-                        <td>{{ $row->bagasi }}</td>
-                        <td>{{ $row->makanan }}</td>
+                        <td>{{ $row->nama_fasilitas }}</td>
                         <td>{{ $row->created_at->format('D M Y') }}</td>
                         <td>
                             <div class="d-flex align-items-center list-action">

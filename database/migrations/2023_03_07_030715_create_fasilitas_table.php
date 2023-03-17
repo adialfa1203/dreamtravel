@@ -14,11 +14,7 @@ return new class extends Migration
         Schema::create('fasilitas', function (Blueprint $table) {
             $table->id();
             $table->foreignId('plat');
-            $table->integer('selimut');
-            $table->integer('tv');
-            $table->integer('wifi');
-            $table->integer('bagasi');
-            $table->integer('makanan');
+            $table->string('nama_fasilitas');
             $table->timestamps();
         });
     }

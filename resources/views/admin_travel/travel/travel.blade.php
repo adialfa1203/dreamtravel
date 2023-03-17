@@ -26,7 +26,7 @@
                         <table class="data-tables table mb-0 tbl-server-info">
                             <thead class="bg-white text-uppercase">
                                 <tr class="ligth light-data">
-                                    <th>#</th>
+                                    <th>No</th>
                                     <th class="text-center">Nomor Plat</th>
                                     <th class="text-center">Nama Kendaraan</th>
                                     <th class="text-center">Foto</th>

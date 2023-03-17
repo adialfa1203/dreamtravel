@@ -18,7 +18,7 @@
                <table id="datatable" class="table data-tables table-striped">
                 <thead class="bg-white text-uppercase">
                     <tr class="ligth ligth-data">
-                        <th>#</th>
+                        <th>No</th>
                         <th>Nomor Plat</th>
                         <th>Tujuan</th>
                         <th>Pemberangkatan</th>

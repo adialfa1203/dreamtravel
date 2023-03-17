@@ -24,11 +24,11 @@
                <table class="data-tables table mb-0 tbl-server-info">
                    <thead class="bg-white text-uppercase">
                        <tr class="ligth light-data">
-                        <th>#</th>
+                        <th>No</th>
                            <th class="text-center">Nomor Plat</th>
                            <th>Harga Dewasa</th>
                            <th>Harga anak-anak</th>  
-                           <th>Tanggal dibuat</th>  
+                           <th>Tanggal dibuat</th>
                            <th class="text-center">Aksi</th>
                        </tr>
                    </thead>
