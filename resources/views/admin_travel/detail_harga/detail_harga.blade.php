@@ -28,7 +28,6 @@
                            <th class="text-center">Nomor Plat</th>
                            <th>Harga Dewasa</th>
                            <th>Harga anak-anak</th>  
-                           <th>Tanggal dibuat</th>
                            <th class="text-center">Aksi</th>
                        </tr>
                    </thead>
@@ -39,10 +38,9 @@
                     @foreach( $data as $row )
                        <tr>
                         <td>{{ $no++ }}</td>
-                        <td>{{ $row->travels->id_plat }}</td>
+                        <td>{{ $row->travels->plat }}</td>
                         <td>{{ $row->dewasa }}</td>
                         <td>{{ $row->anak }}</td>
-                        <td>{{ $row->created_at->format('D M Y') }}</td>
                            <td>
                                <div class="d-flex align-items-center list-action">
                                    <a class="badge bg-success mr-2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Ubah"

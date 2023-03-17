@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->foreignId('plat');
             $table->string('nama_fasilitas');
-            $table->timestamps();
         });
     }
 

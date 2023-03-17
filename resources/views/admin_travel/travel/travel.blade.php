@@ -30,7 +30,6 @@
                                     <th class="text-center">Nomor Plat</th>
                                     <th class="text-center">Nama Kendaraan</th>
                                     <th class="text-center">Foto</th>
-                                    <th class="text-center">Tanggal Dibuat</th>
                                     <th class="text-center">Aksi</th>
                                 </tr>
                             </thead>
@@ -41,10 +40,9 @@
                                 @foreach ($data as $row)
                                     <tr>
                                         <th scope="row">{{ $no++ }}</th>
-                                        <td>{{ $row->id_plat }}</td>
+                                        <td>{{ $row->plat }}</td>
                                         <td>{{ $row->nama_kendaraan }}</td>
                                         <td><img src="{{ asset('fototravel/' . $row->foto) }}" alt="" style="width:100px;"></td>
-                                        <td>{{ $row->created_at->format('D M Y') }}</td>
                                         <td>
                                             <a href="/tampiltravel/{{ $row->id }}" class="btn btn-info"><i class="ri-pencil-line mr-0"></i></a>
                                             <a href="/deletetravel/{{ $row->id }}" class="btn btn-danger"><i class="ri-delete-bin-line mr-0"></i></a>

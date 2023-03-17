@@ -115,12 +115,16 @@ Route::middleware('auth')->group(function() {
         //beranda admin_travel
         Route::get('beranda_travel',[BerandaTravelController::class,'beranda_travel']);
         //travel
+        Route::post('create_travel', [TambahDataController::class, 'insert_data_to_two_tables']);
         Route::get('travel',[TravelController::class,'travel']);
         //fasilitas
+        Route::post('create_fasilitas', [TambahDataController::class, 'insert_data_to_two_tables']);
         Route::get('fasilitas',[FasilitasController::class, 'fasilitas']);
         //detail_harga
+        Route::post('create_harga', [TambahDataController::class, 'insert_data_to_two_tables']);
         Route::get('detail_harga',[DetailHargaController::class, 'detail_harga']);
         //detail_tujuan
+        Route::post('create_tujuan', [TambahDataController::class, 'insert_data_to_two_tables']);
         Route::get('detail_tujuan',[DetailTujuanController::class, 'detail_tujuan']);
         //tambah
         Route::get('tambah',[TambahController::class, 'tambah'])->name('tambah'); //??

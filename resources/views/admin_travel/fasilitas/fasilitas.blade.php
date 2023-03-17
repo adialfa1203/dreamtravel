@@ -26,7 +26,6 @@
                         <th class="text-center">No</th>
                         <th>No Plat</th>
                         <th>Nama Fasilitas</th>
-                        <th>Tanggal dibuat</th>
                         <th class="text-center">Aksi</th>
                     </tr>
                 </thead>
@@ -37,9 +36,8 @@
                     @foreach ($data as $row)
                     <tr>
                         <td scope="row">{{ $no++ }}</td>
-                        <td>{{ $row->travels->id_plat }}</td>
+                        <td>{{ $row->travels->plat }}</td>
                         <td>{{ $row->nama_fasilitas }}</td>
-                        <td>{{ $row->created_at->format('D M Y') }}</td>
                         <td>
                             <div class="d-flex align-items-center list-action">
                                 <a class="badge bg-success mr-2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Ubah"

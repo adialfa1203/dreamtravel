@@ -10,5 +10,5 @@ class travel extends Model
     use HasFactory;
 
     protected $guarded =[];
-    protected $dates=['created_at'];
+    public $timestamps = false;
 }

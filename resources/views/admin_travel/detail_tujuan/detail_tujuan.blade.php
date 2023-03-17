@@ -23,7 +23,6 @@
                         <th>Tujuan</th>
                         <th>Pemberangkatan</th>
                         <th>Jam</th>
-                        <th>tanggal dibuat</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -34,11 +33,10 @@
                     @foreach ($data as $row )
                     <tr> 
                         <td>{{ $no++ }}</td>
-                        <td>{{ $row->travels->id_plat }}</td>
+                        <td>{{ $row->travels->plat }}</td>
                         <td>{{ $row->tujuan }}</td>
                         <td>{{ $row->pemberangkatan }}</td>
                         <td>{{ $row->jam }}</td>
-                        <td>{{ $row->created_at->format('D M Y') }}</td>
                         <td>
                             <div class="d-flex align-items-center list-action">
                                 

@@ -26,6 +26,8 @@
     }>
     </head>
   <body class="  ">
+    <form class="mx-1 mx-md-4" action="" method="POST">
+        @csrf
     <!-- loader Start -->
     <div id="loading">
           <div id="loading-center">
@@ -372,8 +374,8 @@
                 <h4 class="card-title text-center">Detail Travel</h4>
                   <div class="card-body">
                     <div class="col">
-                        <label for="first-name" class="form-label">No Plat</label>
-                        <input type="number" class="form-control" id="first-name" name="id_plat" required>
+                        <label for="plat" class="form-label">No Plat</label>
+                        <input type="number" class="form-control" id="plat" name="plat" required>
                         <div class="valid-feedback">
                             bagus
                         </div>
@@ -382,8 +384,8 @@
                         </div>
                     </div>
                     <div class="col">
-                        <label for="validationCustom02" class="form-label">Nama Kendaraan</label>
-                        <input type="text" class="form-control" id="last-name" name="nama_kendaraan" required>
+                        <label for="nama_kendaraan" class="form-label">Nama Kendaraan</label>
+                        <input type="text" class="form-control" id="nama_kendaraan" name="nama_kendaraan" required>
                         <div class="valid-feedback">
                             bagus
                         </div>
@@ -392,8 +394,8 @@
                         </div>
                     </div>
                     <div class="col">
-                        <label for="validationCustom02" class="form-label">Kategori Kendaraan</label>
-                        <input type="text" class="form-control" id="last-name" name="kategori" required>
+                        <label for="kategori" class="form-label">Kategori Kendaraan</label>
+                        <input type="text" class="form-control" id="kategori" name="kategori" required>
                         <div class="valid-feedback">
                             bagus
                         </div>
@@ -422,8 +424,8 @@
                     <div class="col">
                         <div class="customer_records">
                             <div class="col">
-                                <label for="validationCustom02" class="form-label">Fasilitas</label>
-                                <input type="text" class="form-control" id="last-name" name="nama_fasilitas" required>
+                                <label for="nama_fasilitas" class="form-label">Fasilitas</label>
+                                <input type="text" class="form-control" id="nama_fasilitas" name="nama_fasilitas" required>
                             </div>
                           
                       <br>
@@ -445,8 +447,8 @@
                 <h4 class="card-title text-center">Harga Travel</h4>
                   <div class="card-body">
                     <div class="col">
-                        <label for="first-name" class="form-label">Harga Dewasa</label>
-                        <input type="number" class="form-control" id="first-name" name="id_plat" required>
+                        <label for="dewasa" class="form-label">Harga Dewasa</label>
+                        <input type="number" class="form-control" id="dewasa" name="dewasa" required>
                         <div class="valid-feedback">
                             bagus
                         </div>
@@ -455,8 +457,8 @@
                         </div>
                     </div>
                     <div class="col">
-                        <label for="validationCustom02" class="form-label">Harga Anak-Anak</label>
-                        <input type="number" class="form-control" id="last-name" name="nama_kendaraan" required>
+                        <label for="anak" class="form-label">Harga Anak-Anak</label>
+                        <input type="number" class="form-control" id="anak" name="anak" required>
                         <div class="valid-feedback">
                             bagus
                         </div>
@@ -474,8 +476,8 @@
                 <h4 class="card-title text-center">Tujuan Travel</h4>
                   <div class="card-body">
                     <div class="col">
-                        <label for="first-name" class="form-label">Tujuan</label>
-                        <input type="text" class="form-control" id="first-name" name="id_plat" required>
+                        <label for="tujuan" class="form-label">Tujuan</label>
+                        <input type="text" class="form-control" id="tujuan" name="tujuan" required>
                         <div class="valid-feedback">
                             bagus
                         </div>
@@ -484,8 +486,8 @@
                         </div>
                     </div>
                     <div class="col">
-                        <label for="validationCustom02" class="form-label">Berangkat</label>
-                        <input type="date" class="form-control" id="last-name" name="nama_kendaraan" required>
+                        <label for="pemberangkatan" class="form-label">Berangkat</label>
+                        <input type="date" class="form-control" id="pemberangkatan" name="pemberangkatan" required>
                         <div class="valid-feedback">
                             bagus
                         </div>
@@ -494,8 +496,8 @@
                         </div>
                     </div>
                     <div class="col">
-                        <label for="validationCustom02" class="form-label">Jam</label>
-                        <input type="time" class="form-control" id="last-name" name="kategori" required>
+                        <label for="jam" class="form-label">Jam</label>
+                        <input type="time" class="form-control" id="jam" name="jam" required>
                         <div class="valid-feedback">
                             bagus
                         </div>
@@ -503,7 +505,8 @@
                             Tolong masukan data
                         </div>
                         <br>
-                        <a href="#" class="btn btn-primary">Tambahkan</a>
+                        {{-- <a href="#" class="btn btn-primary">Tambahkan</a> --}}
+                        <button type="submit" class="btn btn-primary">Tambahkan</button>
                     </div>          
                     </div>
                   </div>
