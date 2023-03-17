@@ -122,7 +122,7 @@
                   </div>
                     </form>
                 </div>
-                <div id="step-4" class="tab-pane" role="tabpanel" aria-labelledby="step-4">
+                <div id="step-4" class="tab-pane" role="tabpanel" aria-labelledby="step-4" style="height: auto">
                   <form id="form-4" class="row row-cols-1 ms-5 me-5 needs-validation" novalidate>
                     <div class="col">
                         <label for="validationCustom02" class="form-label">Tujuan</label>

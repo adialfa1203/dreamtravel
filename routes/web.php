@@ -49,8 +49,10 @@ Route::middleware('only_guest')->group(function() {
     Route::get('register',[AuthController::class,'register']);
     Route::post('register',[AuthController::class,'registerProcess']);
 });
-//tab
-Route::get('tab', [AddtabController::class, 'index']);
+//tambah data
+Route::get('tambah_data', function () {
+    return view('admin_travel.tambah_data.index');
+});
 
 Route::middleware('auth')->group(function() {
     //pemesanan
