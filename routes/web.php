@@ -21,6 +21,7 @@ use App\Http\Controllers\DetailHargaController;
 use App\Http\Controllers\DetailTujuanController;
 use App\Http\Controllers\PemesananTravController;
 use App\Http\Controllers\TambahController;
+use App\Http\Controllers\TambahDataController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,10 +50,6 @@ Route::middleware('only_guest')->group(function() {
     Route::get('register',[AuthController::class,'register']);
     Route::post('register',[AuthController::class,'registerProcess']);
 });
-//tambah data
-Route::get('tambah_data', function () {
-    return view('admin_travel.tambah_data.index');
-});
 
 Route::middleware('auth')->group(function() {
     //pemesanan
@@ -60,7 +57,7 @@ Route::middleware('auth')->group(function() {
     Route::post('pemesanan', [PemesananTravController::class, 'pemesananproses']);
     //logout
     Route::get('logout', [AuthController::class,'logout']);
-
+    
     // profile
 
     Route::get('profile', [PenggunaWebController::class, 'indexprofile'])->name('profile');
@@ -108,7 +105,7 @@ Route::middleware('auth')->group(function() {
         // profile
         
         
-       
+        
         //halaaman percobaan
         //test faq
         // Route::get('Komentar',[HubungiKamiController::class, 'create']);
@@ -126,10 +123,12 @@ Route::middleware('auth')->group(function() {
         //detail_tujuan
         Route::get('detail_tujuan',[DetailTujuanController::class, 'detail_tujuan']);
         //tambah
-        Route::get('tambah',[TambahController::class, 'tambah'])->name('tambah');
+        Route::get('tambah',[TambahController::class, 'tambah'])->name('tambah'); //??
         //pesanan
         Route::get('pesanan',[PemesananTravController::class,'index']);
         Route::get('/hpus/{id}',[PemesananTravController::class,'hpus']);
+        //tambah data ??
+        Route::get('tambah_data', [TambahDataController::class, 'index']);
     });
-    });
+});
 

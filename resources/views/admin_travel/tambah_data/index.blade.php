@@ -4,6 +4,7 @@
 <html lang="en">
   
 <!-- Mirrored from templates.iqonic.design/lite/posdash/html/backend/ui-cards.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Mar 2023 04:11:09 GMT -->
+@section('/travel','active')
 <head>
     <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -65,8 +66,8 @@
                             </svg>
                         </a>
                         <ul id="product" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                            <li class="submenu @yield('/tambah')">
-                                <a href="/tambah">
+                            <li class="submenu @yield('tambah_data')">
+                                <a href="{{ url('tambah_data')}}">
                                     <i class="las la-minus"></i><span>Tambah Data</span>
                                 </a>
                             </li>

@@ -56,8 +56,8 @@
                             </svg>
                         </a>
                         <ul id="product" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                            <li class="submenu @yield('/tambah')">
-                                <a href="/tambah">
+                            <li class="submenu @yield('tambah_data')">
+                                <a href="{{ url('tambah_data')}}">
                                     <i class="las la-minus"></i><span>Tambah Data</span>
                                 </a>
                             </li>
