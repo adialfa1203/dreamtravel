@@ -363,7 +363,6 @@
                 <table class="data-tables table mb-0 tbl-server-info">
                     <thead class="bg-white text-uppercase">
                         <tr class="ligth light-data">
-
                             <th class="col-1">No</th>
                             <th class="col-1">Nama Pemilik</th>
                             <th class="col-1">Nama Travel</th>

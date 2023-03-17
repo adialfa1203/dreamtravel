@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AddtabController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DetailController;
 use App\Http\Controllers\NotifikasiController;
@@ -48,6 +49,8 @@ Route::middleware('only_guest')->group(function() {
     Route::get('register',[AuthController::class,'register']);
     Route::post('register',[AuthController::class,'registerProcess']);
 });
+//tab
+Route::get('tab', [AddtabController::class, 'index']);
 
 Route::middleware('auth')->group(function() {
     //pemesanan
@@ -100,9 +103,8 @@ Route::middleware('auth')->group(function() {
         Route::get('/hps/{id}',[PesananController::class,'hps'])->name('hps');
         
         //logout
-
         // profile
-
+        
         
        
         //halaaman percobaan
