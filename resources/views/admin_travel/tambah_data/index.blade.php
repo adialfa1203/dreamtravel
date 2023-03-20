@@ -486,6 +486,16 @@
                         </div>
                     </div>
                     <div class="col">
+                        <label for="beangkat" class="form-label">Area Penjemputan</label>
+                        <input type="text" class="form-control" id="berangkat" name="berangkat" required>
+                        <div class="valid-feedback">
+                          bagus
+                      </div>
+                      <div class="invalid-feedback">
+                          Tolong masukan data
+                      </div>
+                    </div>
+                    <div class="col">
                         <label for="pemberangkatan" class="form-label">Berangkat</label>
                         <input type="date" class="form-control" id="pemberangkatan" name="pemberangkatan" required>
                         <div class="valid-feedback">
@@ -514,6 +524,7 @@
             </div>
       </div>
     </div>
+    </form>
     <!-- Backend Bundle JavaScript -->
     <script src="../assets/js/backend-bundle.min.js"></script>
     
@@ -554,6 +565,7 @@
       e.preventDefault();
     });
         </script>
+   
   </body>
 
 <!-- Mirrored from templates.iqonic.design/lite/posdash/html/backend/ui-cards.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Mar 2023 04:11:13 GMT -->

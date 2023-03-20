@@ -21,6 +21,7 @@
                         <th>No</th>
                         <th>Nomor Plat</th>
                         <th>Tujuan</th>
+                        <th>Area Penjemputan</th>
                         <th>Pemberangkatan</th>
                         <th>Jam</th>
                         <th>Aksi</th>
@@ -33,8 +34,9 @@
                     @foreach ($data as $row )
                     <tr> 
                         <td>{{ $no++ }}</td>
-                        <td>{{ $row->travels->plat }}</td>
+                        <td>{{ $row->plat }}</td>
                         <td>{{ $row->tujuan }}</td>
+                        <td>{{$row->berangkat}}</td>
                         <td>{{ $row->pemberangkatan }}</td>
                         <td>{{ $row->jam }}</td>
                         <td>

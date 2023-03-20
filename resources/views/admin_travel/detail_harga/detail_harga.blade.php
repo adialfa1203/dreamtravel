@@ -38,7 +38,7 @@
                     @foreach( $data as $row )
                        <tr>
                         <td>{{ $no++ }}</td>
-                        <td>{{ $row->travels->plat }}</td>
+                        <td>{{ $row->plat }}</td>
                         <td>{{ $row->dewasa }}</td>
                         <td>{{ $row->anak }}</td>
                            <td>

@@ -36,7 +36,7 @@
                     @foreach ($data as $row)
                     <tr>
                         <td scope="row">{{ $no++ }}</td>
-                        <td>{{ $row->travels->plat }}</td>
+                        <td>{{ $row->plat }}</td>
                         <td>{{ $row->nama_fasilitas }}</td>
                         <td>
                             <div class="d-flex align-items-center list-action">

@@ -30,12 +30,12 @@
                                         </svg>
                                     </a>
                                     <ul id="product" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                                        <li class="submenu @yield('/tambah_data')">
+                                        <li class="submenu @yield('tambah_data')">
                                             <a href="{{url('tambah_data')}}">
                                                 <i class="las la-minus"></i><span>Tambah Data</span>
                                             </a>
                                         </li>
-                                        <li class="submenu @yield('/travel')">
+                                        <li class="submenu @yield('/travel_data')">
                                             <a href="/travel">
                                                 <i class="las la-minus"></i><span>Travel</span>
                                             </a>
