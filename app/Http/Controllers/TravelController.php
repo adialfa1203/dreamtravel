@@ -12,4 +12,5 @@ class TravelController extends Controller
 
         return view('admin_travel.travel.travel',compact('data'));
     }
+    
 }

@@ -396,7 +396,7 @@
                                 <p class="mb-0">Detail Travel akan menampilkan beberapa travel yang tersedia secara
                                     detail<br></p>
                             </div>
-
+                            <a href="#" class="btn btn-primary add-list"><i class="las la-plus mr-3"></i>Tambah Travel</a>
                         </div>
                     </div>
                     <div class="col-lg-12">
