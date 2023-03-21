@@ -117,15 +117,19 @@ Route::middleware('auth')->group(function() {
         //travel
         Route::post('create_data', [TambahDataController::class, 'insert_data_to_two_tables']);
         Route::get('travel',[TravelController::class,'travel']);
+        Route::get('/delete_travel/{id}', [TambahDataController::class, 'delete_travel']);
         //fasilitas
         // Route::post('create_fasilitas', [TambahDataController::class, 'insert_data_to_two_tables']);
         Route::get('fasilitas',[FasilitasController::class, 'fasilitas']);
+        Route::get('/delete_fasilitas/{id}', [TambahDataController::class, 'delete_fasilitas']);
         //detail_harga
         // Route::post('create_harga', [TambahDataController::class, 'insert_data_to_two_tables']);
         Route::get('detail_harga',[DetailHargaController::class, 'detail_harga']);
+        Route::get('/delete_harga/{id}', [TambahDataController::class, 'delete_harga']);
         //detail_tujuan
         // Route::post('create_tujuan', [TambahDataController::class, 'insert_data_to_two_tables']);
         Route::get('detail_tujuan',[DetailTujuanController::class, 'detail_tujuan']);
+        Route::get('/delete_tujuan/{id}', [TambahDataController::class, 'delete_tujuan']);
         //tambah
         Route::get('tambah',[TambahDataController::class, 'index']);
         Route::post('tambah',[TambahDataController::class, 'insert_data_to_two_tables']);

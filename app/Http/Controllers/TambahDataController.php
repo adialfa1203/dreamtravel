@@ -12,20 +12,25 @@ class TambahDataController extends Controller
 {
     public function index()
     {
+        $travel = travel::orderBy('id','desc')->get();
+        $fasilitas = fasilitas::orderBy('id','desc')->get();
+        $harga = detail_harga::orderBy('id','desc')->get();
+        $tujuan = detail_tujuan::orderBy('id','desc')->get();
+
         return view('admin_travel.tambah_data.index');
     }
     public function insert_data_to_two_tables(Request $request)
     {
         
-    // $foto_file = $request->file('foto');
-    // $foto_ekstensi = $foto_file->extension();
-    // $foto_nama = date('ymdhis').".".$foto_ekstensi;
-    // $foto_file->move(public_path('fotoitu'), $foto_nama);
+    $foto_file = $request->file('foto');
+    $foto_ekstensi = $foto_file->extension();
+    $foto_nama = date('ymdhis').".".$foto_ekstensi;
+    $foto_file->move(public_path('fotoitu'), $foto_nama);
     $travel = travel::create([
         'plat' => $request -> plat,
         'nama_kendaraan' => $request -> nama_kendaraan,
         'kategori' => $request -> kategori,
-        'foto' => $request -> foto,
+        'foto' => $foto_nama,
     ]);
    
     // Simpan data ke dalam tabel 'fasilitas'
@@ -51,5 +56,40 @@ class TambahDataController extends Controller
     ]);
         return redirect()->back();
 
+    }
+//     public function delete_editor($id)
+//     {
+//         $travel = travel::find($id);
+//         // unlink(public_path('foto/' . $travel->foto));
+//         $travel->delete();
+//         return redirect()->back()->with('success', 'Berhasil Hapus');
+//     }
+
+    public function delete_travel($id)
+    {
+        $travel = travel::find($id);
+        $travel->delete();
+        return redirect()->back();
+    }
+
+    public function delete_fasilitas($id)
+    {
+        $fasilitas = fasilitas::find($id);
+        $fasilitas->delete();
+        return redirect()->back();
+    }
+
+    public function delete_harga($id)
+    {
+        $harga = detail_harga::find($id);
+        $harga->delete();
+        return redirect()->back();
+    }
+
+    public function delete_tujuan($id)
+    {
+        $tujuan = detail_tujuan::find($id);
+        $tujuan->delete();
+        return redirect()->back();
     }
 }

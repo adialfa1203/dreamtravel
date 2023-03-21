@@ -405,7 +405,7 @@
                     </div>          
                     <div class="col">
                         <label for="foto" class="col-sm-2 col-form-label">Foto Siswa</label>
-                        <input type="file" class="form-control" name="foto" id="foto">
+                        <input type="file" class="form-control" name="foto " id="foto">
                         <div class="valid-feedback">
                             bagus
                         </div>
