@@ -142,3 +142,6 @@ Route::middleware('auth')->group(function() {
     });
 });
 
+Route::get('pembayaran', function() {
+    return view('admin.pembayaran.index');
+});
