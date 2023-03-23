@@ -26,7 +26,7 @@
     }>
     </head>
   <body class="  ">
-    <form class="mx-1 mx-md-4" action="" method="POST">
+    <form class="mx-1 mx-md-4" action="tambah_data" method="POST" enctype="multipart/form-data">
         @csrf
     <!-- loader Start -->
     <div id="loading">

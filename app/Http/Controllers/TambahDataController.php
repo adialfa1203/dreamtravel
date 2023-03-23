@@ -23,7 +23,7 @@ class TambahDataController extends Controller
     {
         
     $foto_file = $request->file('foto');
-    $foto_ekstensi = $foto_file->extension();
+    $foto_ekstensi = $foto_file->getClientOriginalExtension();
     $foto_nama = date('ymdhis').".".$foto_ekstensi;
     $foto_file->move(public_path('fotoitu'), $foto_nama);
     $travel = travel::create([
