@@ -60,63 +60,76 @@
             <div class="card card-block card-stretch card-height">
                 <div class="card-header d-flex justify-content-between">
                     <div class="header-title">
-                        <h4 class="card-title">Ringkasan Pesanan</h4>
+                        <h4 class="card-title">Ringkasan Tujuan</h4>
                     </div>                        
                     <div class="card-header-toolbar d-flex align-items-center">
                         <div class="dropdown">
-                            <span class="dropdown-toggle dropdown-bg btn" id="dropdownMenuButton004"
-                                    data-toggle="dropdown">
-                                    Bulan ini<i class="ri-arrow-down-s-line ml-1"></i>
-                                </span>
-                                <div class="dropdown-menu dropdown-menu-right shadow-none"
-                                    aria-labelledby="dropdownMenuButton004">
-                                    <a class="dropdown-item" href="#">Tahun</a>
-                                    <a class="dropdown-item" href="#">Bulan</a>
-                                    <a class="dropdown-item" href="#">Minggu</a>
-                                </div>
-                        </div>
-                    </div>
-                </div> 
-                <div class="card-body">
-                    <div class="d-flex flex-wrap align-items-center mt-2">
-                        <div class="d-flex align-items-center progress-order-left">
-                            <div class="progress progress-round m-0 orange conversation-bar" data-percent="46">
-                                <span class="progress-left">
-                                    <span class="progress-bar"></span>
-                                </span>
-                                <span class="progress-right">
-                                    <span class="progress-bar"></span>
-                                </span>
-                                <div class="progress-value text-secondary">46%</div>
-                            </div>
-                            <div class="progress-value ml-3 pr-5 border-right">
-                                <h5>Pesanan Rata-Rata</h5>
-                                <p class="mb-0">1M</p>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center ml-5 progress-order-right">
-                            <div class="progress progress-round m-0 primary conversation-bar" data-percent="70">
-                                <span class="progress-left">
-                                    <span class="progress-bar"></span>
-                                </span>
-                                <span class="progress-right">
-                                    <span class="progress-bar"></span>
-                                </span>
-                                <div class="progress-value text-primary">70%</div>
-                            </div>
-                            <div class="progress-value ml-3">
-                                <h5>Pesanan Terbanyak</h5>
-                                <p class="mb-0">5M</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                <div class="card-body pt-0">
-                    <div id="layout1-chart-5"></div>
-                </div>
+            </div>
+        </div> 
+        <div class="card card-block card-stretch card-height">
+            <div id="penjualan"></div>
+        </div>
             </div>
         </div>
     </div>
     <!-- Page end  -->
 </div>
+@endsection
+
+@section('footer')
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script>
+        Highcharts.chart('penjualan', {
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Laporan Tujuan Terpopuler'
+        },
+        xAxis: {
+            categories: [
+                'Perjalanan'
+            ],
+            crosshair: true
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Tujuan'
+            }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: 'Jawa Timur',
+            data: [49.9]
+
+        }, {
+            name: 'Bali',
+            data: [83.6]
+
+        }, {
+            name: 'Jawa Barat',
+            data: [48.9]
+
+        }, {
+            name: 'Aceh',
+            data: [42.4]
+
+        }]
+    });
+    </script>
 @endsection
