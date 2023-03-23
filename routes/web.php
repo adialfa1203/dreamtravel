@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AddtabController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DetailController;
 use App\Http\Controllers\NotifikasiController;
@@ -21,6 +22,7 @@ use App\Http\Controllers\DetailHargaController;
 use App\Http\Controllers\DetailTujuanController;
 use App\Http\Controllers\PemesananTravController;
 use App\Http\Controllers\TambahController;
+use App\Http\Controllers\TambahDataController;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,7 +60,7 @@ Route::middleware('auth')->group(function() {
     Route::post('pemesanan', [PemesananTravController::class, 'pemesananproses']);
     //logout
     Route::get('logout', [AuthController::class,'logout']);
-
+    
     // profile
 
     Route::get('profile', [PenggunaWebController::class, 'indexprofile'])->name('profile');
@@ -105,11 +107,10 @@ Route::middleware('auth')->group(function() {
 
         
         //logout
-
         // profile
-
         
-       
+        
+        
         //halaaman percobaan
         //test faq
         // Route::get('Komentar',[HubungiKamiController::class, 'create']);
@@ -119,17 +120,34 @@ Route::middleware('auth')->group(function() {
         //beranda admin_travel
         Route::get('beranda_travel',[BerandaTravelController::class,'beranda_travel']);
         //travel
+        Route::post('create_data', [TambahDataController::class, 'insert_data_to_two_tables']);
         Route::get('travel',[TravelController::class,'travel']);
+        Route::get('/delete_travel/{id}', [TambahDataController::class, 'delete_travel']);
         //fasilitas
+        // Route::post('create_fasilitas', [TambahDataController::class, 'insert_data_to_two_tables']);
         Route::get('fasilitas',[FasilitasController::class, 'fasilitas']);
+        Route::get('/delete_fasilitas/{id}', [TambahDataController::class, 'delete_fasilitas']);
         //detail_harga
+        // Route::post('create_harga', [TambahDataController::class, 'insert_data_to_two_tables']);
         Route::get('detail_harga',[DetailHargaController::class, 'detail_harga']);
+        Route::get('/delete_harga/{id}', [TambahDataController::class, 'delete_harga']);
         //detail_tujuan
+        // Route::post('create_tujuan', [TambahDataController::class, 'insert_data_to_two_tables']);
         Route::get('detail_tujuan',[DetailTujuanController::class, 'detail_tujuan']);
+        Route::get('/delete_tujuan/{id}', [TambahDataController::class, 'delete_tujuan']);
         //tambah
-        Route::get('tambah',[TambahController::class, 'tambah'])->name('tambah');
+        Route::get('tambah',[TambahDataController::class, 'index']);
+        Route::post('tambah',[TambahDataController::class, 'insert_data_to_two_tables']);
         //pesanan
         Route::get('pesanan',[PemesananTravController::class,'index']);
         Route::get('/hpus/{id}',[PemesananTravController::class,'hpus']);
+        //tambah data ??
+        Route::get('tambah_data', [TambahDataController::class, 'index']);
+        Route::post('tambah_data', [TambahDataController::class, 'insert_data_to_two_tables']);
     });
+<<<<<<< HEAD
     });
+=======
+});
+
+>>>>>>> 5a15c1ed777d4cc9cb14628aa7f54c2a672c3711

@@ -13,11 +13,10 @@ return new class extends Migration
     {
         Schema::create('detail_tujuans', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_plat');
+            $table->foreignId('plat');
             $table->string('tujuan');
             $table->string('pemberangkatan');
             $table->time('jam');
-            $table->timestamps();
         });
     }
 

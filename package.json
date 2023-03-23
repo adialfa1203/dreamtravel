@@ -10,6 +10,11 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
+<<<<<<< HEAD
         "chart.js": "^4.2.1"
+=======
+        "chart.js": "^4.2.1",
+        "smartwizard": "^6.0.6"
+>>>>>>> 5a15c1ed777d4cc9cb14628aa7f54c2a672c3711
     }
 }

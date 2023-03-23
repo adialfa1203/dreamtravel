@@ -84,7 +84,7 @@ class  AuthController extends Controller
         
                 
         // $user = User::create($request->all());
-        
+          
         User::create([
             'nama' => $request -> nama,
             'email' => $request -> email,

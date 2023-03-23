@@ -16,7 +16,6 @@ return new class extends Migration
             $table->foreignId('plat');
             $table->integer('dewasa');
             $table->integer('anak');
-            $table->timestamps();
         });
     }
 

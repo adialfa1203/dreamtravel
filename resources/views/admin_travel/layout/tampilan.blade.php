@@ -10,6 +10,8 @@
       <title>Beranda</title>
       
       <!-- Favicon -->
+        <link rel="stylesheet" href="{{asset('css/smart_wizard_all.min.css')}}">
+        
       <link rel="shortcut icon" href="https://templates.iqonic.design/lite/posdash/html/assets/images/favicon.ico" />
       <link rel="stylesheet" href="{{ asset ('E5 (1)\E5/templates.iqonic.design/lite/posdash/html/assets/css/backend-plugin.min.css')}}">
       <link rel="stylesheet" href="{{ asset ('E5 (1)\E5/templates.iqonic.design/lite/posdash/html/assets/css/backende209.css?v=1.0.0')}}">
@@ -20,9 +22,6 @@
      <script src="{{ asset ('dreamtravel/resources/js/smart.js')}}"></script> --}}
     <!-- Google Tag Manager -->
 
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/smartwizard@6/dist/css/smart_wizard_all.min.css" rel="stylesheet" type="text/css" />
       
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
@@ -100,7 +99,8 @@
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script> -->
 
     <!-- Include SmartWizard JavaScript source -->
-    <script src="https://cdn.jsdelivr.net/npm/smartwizard@6/dist/js/jquery.smartWizard.min.js" type="text/javascript"></script>
+    {{-- <script src="https://cdn.jsdelivr.net/npm/smartwizard@6/dist/js/jquery.smartWizard.min.js" type="text/javascript"></script> --}}
+    <script src="{{asset('js/jquery.smartWizard.min.js')}}"></script>
     @yield('script')
   </body>
 
