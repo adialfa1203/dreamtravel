@@ -67,7 +67,7 @@ Route::middleware('auth')->group(function() {
     Route::get('editprofile', [PenggunaWebController::class, 'editprofile']);
     Route::post('/update/{id}', [PenggunaWebController::class, 'update']);
     Route::post('/updateee/{id}', [PenggunaWebController::class, 'updateee']);
-    
+}); 
     Route::middleware('only_admin')->group(function(){
     //admin
         Route::get('admin', function () {
@@ -145,9 +145,7 @@ Route::middleware('auth')->group(function() {
         Route::get('tambah_data', [TambahDataController::class, 'index']);
         Route::post('tambah_data', [TambahDataController::class, 'insert_data_to_two_tables']);
     });
-<<<<<<< HEAD
-    });
-=======
-});
 
->>>>>>> 5a15c1ed777d4cc9cb14628aa7f54c2a672c3711
+Route::get('pembayaran', function() {
+    return view('admin.pembayaran.index');
+});

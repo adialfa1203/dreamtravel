@@ -102,6 +102,7 @@
     {{-- <script src="https://cdn.jsdelivr.net/npm/smartwizard@6/dist/js/jquery.smartWizard.min.js" type="text/javascript"></script> --}}
     <script src="{{asset('js/jquery.smartWizard.min.js')}}"></script>
     @yield('script')
+    @yield('footer')
   </body>
 
 <!-- Mirrored from templates.iqonic.design/lite/posdash/html/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 16 Feb 2023 02:59:20 GMT -->

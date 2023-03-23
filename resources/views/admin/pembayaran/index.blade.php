@@ -366,10 +366,10 @@
                         </tr>
                     </thead>
                     <tbody class="ligth-body">
-                        @foreach ($data as $item)
+                        {{-- @foreach ($data as $item) --}}
                         
                         
-                        <tr>
+                        {{-- <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $item->travel }}</td>
                             <td>{{ $item->tujuan }}</td>
@@ -385,9 +385,9 @@
                                         href="#"><i class="ri-delete-bin-line mr-0"></i></a>
                                 </div>
                             </td>
-                        </tr>
+                        </tr> --}}
 
-                        @endforeach
+                        {{-- @endforeach --}}
                     </tbody>
                 </table>
                 </div>
