@@ -2,52 +2,24 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\faq;
 use Illuminate\Http\Request;
 
 class FAQController extends Controller
 {
-    public function index()
+    public function faq()
     {
-        return view ('users.beranda.index');
+        return view('users.faq.indexfaq');
     }
-
-    public function indexdetailkendaraan()
+    public function faqs()
     {
-        return view ('users.detailkendaraan.indexdetailkendaraan');
+        $data = faq::orderBy('id', 'desc')->get();
+        return view('admin.pesan-navbar.semuapesan')->with('data', $data);
     }
-
-    public function indexdetailtravel()
+    public function createfaq(Request $request)
     {
-        return view ('users.detailtravel.indexdetailtravel');
+       faq::create($request->all());
+        return redirect()->Route('faq');
     }
-
-    public function indexfaq()
-    {
-        return view ('users.faq.indexfaq');
-    }
-    
-    public function indexhasilpencarian()
-    {
-        return view ('users.hasilpencarian.indexhasilpencarian');
-    }
-
-    public function indexkontak()
-    {
-        return view ('users.kontak.indexkontak');
-    }
-
-    public function indexpesan()
-    {
-        return view ('users.pesan.indexpesan');
-    }
-
-    public function indexprofile()
-    {
-        return view ('users.profile.indexprofile');
-    }
-    
-    public function indextentangkami()
-    {
-        return view ('users.tentangkami.indextentangkami');
-    }
+   
 }

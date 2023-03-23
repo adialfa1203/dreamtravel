@@ -341,52 +341,94 @@
                 </div>
             </div>
         </div>
-    </div>      <div class="content-page">
-     <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="d-flex flex-wrap align-items-center justify-content-between mb-4">
-                    <div>
-                        <h4 class="mb-3">Semua Pesan</h4>
-                        <p class="mb-0">Semua pesan akan menampilkan semua pesan dari customer</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-12">
-                <div class="table-responsive rounded mb-3">
-                <table class="data-table table mb-0 tbl-server-info">
-                    <thead class="bg-white text-uppercase">
-                        <tr class="ligth ligth-data">
-                            <th>No</th>
-                            <th>Nama</th>
-                            <th>Email</th>
-                            <th>Pesan</th>
-                            <th>Aksi</th>
-                        </tr>
-                    </thead>
-                    <tbody class="ligth-body">
-                        @foreach ($data as $item)
-                            
-                        <tr>
-                            <td>{{ $loop->iteration }}</td>
-                            <td>{{ $item->nama }}</td>
-                            <td>{{ $item->email }}</td>
-                            <td>{{ $item->pesan}}</td>
-                            <td>
-                                <div class="d-flex align-items-center list-action">
-                                    <a class="badge bg-warning mr-2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"
-                                        href="{{ url('/deletpesan/'.$item->id)}}"><i class="ri-delete-bin-line mr-0"></i></a>
+    </div>      
+    <div class="content-page">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="d-flex flex-wrap align-items-center justify-content-between mb-4">
+                        <div>
+                            <h4 class="mb-3">FAQ</h4>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                                Tambah FAQ
+                            </button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Tambah FAQ</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <form action="" method="POST">
+                                            @csrf
+                                            <div class="modal-body">
+                                                <div class="form-group">
+                                                    <label>Pertanyaan</label>
+                                                    <input type="text" class="form-control" id="exampleInputEmail1"
+                                                        aria-describedby="emailHelp">
+                                                </div>
+                                                @error('Pertanyaan')
+                                                <div class="alert alert-danger">{{ $message }}</div>
+                                                @enderror
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="form-group">
+                                                    <label>Jawaban</label>
+                                                    <textarea type="text" class="form-control" id="exampleInputEmail1"
+                                                        aria-describedby="emailHelp"></textarea>
+                                                </div>
+                                                @error('jawaban')
+                                                <div class="alert alert-danger">{{ $message }}</div>
+                                                @enderror
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary">Kirim</button><br><br>
+                                            </div>
+                                    </div>
                                 </div>
-                            </td>
-                        </tr>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="table-responsive rounded mb-3">
+                            <table class="data-table table mb-0 tbl-server-info">
+                                <thead class="bg-white text-uppercase">
+                                    <tr class="ligth ligth-data">
+                                        <th>No</th>
+                                        <th>Nama Lengkap</th>
+                                        <th>Email</th>
+                                        <th>Pertanyaan</th>
+                                        {{-- <th>Aksi</th> --}}
+                                    </tr>
+                                </thead>
+                                @php
+                                $no=0;
+                                @endphp
+                                <tbody class="ligth-body">
+                                    @foreach ($data as $item)
 
-                        @endforeach
-                    </tbody>
-                </table>
+                                    <tr>
+                                        <td>{{ ++$no }}</td>
+                                        <td>{{ $item->nama_lengkap }}</td>
+                                        <td>{{ $item->email }}</td>
+                                        <td>{{ $item->pertanyaan}} </td>
+                                        <td>
                 </div>
             </div>
+            </td>
+            </tr>
+
+            @endforeach
+            </tbody>
+            </table>
         </div>
-        <!-- Page end  -->
+    </div>
     </div>
     <!-- Modal Edit -->
     <div class="modal fade" id="edit-note" tabindex="-1" role="dialog" aria-hidden="true">
