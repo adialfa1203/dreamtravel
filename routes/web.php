@@ -11,6 +11,7 @@ use App\Http\Controllers\PesananController;
 use App\Http\Controllers\PesanNavController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\GrafikController;
 
 //admin travel
 use App\Http\Controllers\BerandaTravelController;
@@ -40,6 +41,8 @@ Route::get('faq', [PenggunaWebController::class, 'indexfaq']);
 Route::get('detailtravel', [PenggunaWebController::class, 'indexdetailtravel']);
 Route::get('kontak', [PenggunaWebController::class, 'indexkontak']);
 // Route::get('pesan', [PenggunaWebController::class, 'indexpesan']);
+Route::get('/grafik', [GrafikController::class, 'getData']);
+
 
 //login register
 Route::middleware('only_guest')->group(function() {
@@ -61,9 +64,10 @@ Route::middleware('auth')->group(function() {
     Route::get('profile', [PenggunaWebController::class, 'indexprofile'])->name('profile');
     Route::get('editprofile', [PenggunaWebController::class, 'editprofile']);
     Route::post('/update/{id}', [PenggunaWebController::class, 'update']);
+    Route::post('/updateee/{id}', [PenggunaWebController::class, 'updateee']);
     
     Route::middleware('only_admin')->group(function(){
-        //admin
+    //admin
         Route::get('admin', function () {
             return view('admin.beranda.index');
         })->middleware(['auth', 'only_admin']);
@@ -98,6 +102,7 @@ Route::middleware('auth')->group(function() {
         Route::get('/delete/{id}',[PenggunaController::class,'delete'])->name('delete');
         Route::get('/destroy/{id}',[PenggunaController::class,'destroy'])->name('destroy');
         Route::get('/hps/{id}',[PesananController::class,'hps'])->name('hps');
+
         
         //logout
 
@@ -128,4 +133,3 @@ Route::middleware('auth')->group(function() {
         Route::get('/hpus/{id}',[PemesananTravController::class,'hpus']);
     });
     });
-

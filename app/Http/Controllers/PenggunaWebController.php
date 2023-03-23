@@ -44,7 +44,6 @@ class PenggunaWebController extends Controller
 
     public function indexprofile()
     {
-       
         return view('users.profile.indexxxprofile');
     }
     
@@ -66,16 +65,24 @@ class PenggunaWebController extends Controller
     {
         $validateddata=$request->validate([
             'email'=>'required|unique:users,email,'.$request->id.',id',
-            'nama'=>'required',
-            'alamat'=>'required',
+            'nama'=>'required|min:2|max:255',
+            'foto'=>'image',
+            'alamat'=>'required|min:4|max:255',
             'tanggal'=>'required',
-            'no'=>'required',
+            'no'=>'required|min:11|max:255'
             // 'password'=>'required'
             // 'status'=>'required|unique:users,status'.$request->id.',id',
             // 'email'=>'required|unique:users,email'.$request->id.',id'
         ]);
         $data = User::find($id);
         $data->update($request->all());
+        if($request->hasfile('foto')){
+            $request->file('foto')->move('img/',$request->file('foto')->getClientOriginalName());
+            $data->foto = $request->file('foto')->getClientOriginalName();
+            // dd($data->foto);
+            $data->save();
+            return redirect('profile');
+        }
         return redirect('profile');
     }
 
@@ -94,6 +101,29 @@ class PenggunaWebController extends Controller
         $data = User::find($id);
         $data->update($request->all());
         return redirect('/profil');
+    }
+
+    public function updateee(Request $request,$id)
+    {
+        $validateddata=$request->validate([
+            'foto'=>'required|image'
+            // 'nama'=>'required',
+            // 'alamat'=>'required',
+            // 'tanggal'=>'required',
+            // 'no'=>'required',
+            // 'password'=>'required'
+            // 'status'=>'required|unique:users,status'.$request->id.',id',
+            // 'email'=>'required|unique:users,email'.$request->id.',id'
+        ]);
+        $data = User::find($id);
+        if($request->hasfile('foto')){
+            $request->file('foto')->move('img/',$request->file('foto')->getClientOriginalName());
+            $data->foto = $request->file('foto')->getClientOriginalName();
+            dd($data->foto);
+            $data->save();
+            return redirect('profile');
+        }
+        return redirect('profile');
     }
 
 }

@@ -396,6 +396,11 @@
   <script type="text/javascript" src="{{ asset ('ah (2)\ah\adi1/html.cwsthemes.com/suntour/tuner/js/colorpicker.js')}}"></script>
   <script type="text/javascript" src="{{ asset ('ah (2)\ah\adi1/html.cwsthemes.com/suntour/tuner/js/scripts.js')}}"></script>
   <script type="text/javascript" src="{{ asset ('ah (2)\ah\adi1h/tml.cwsthemes.com/suntour/js/retina.min.js')}}"></script>
+  <script>
+    function choseFile(){
+      document.getElementById('fileInput').click();
+    }
+  </script>
 </body>
 
 <!-- Mirrored from html.cwsthemes.com/suntour/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 16 Feb 2023 00:48:47 GMT -->

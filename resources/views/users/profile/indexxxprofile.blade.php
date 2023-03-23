@@ -4,11 +4,11 @@
     <!-- Top navbar -->
     {{-- <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
         <div class="container-fluid"> --}}
-            <!-- Brand -->
-            {{-- <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block"
+    <!-- Brand -->
+    {{-- <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block"
                 href="https://www.creative-tim.com/product/argon-dashboard" target="_blank">Profil Pengguna</a> --}}
-            <!-- Form -->
-            <!-- <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
+    <!-- Form -->
+    <!-- <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
                     <div class="form-group mb-0">
                         <div class="input-group input-group-alternative">
                             <div class="input-group-prepend">
@@ -18,8 +18,8 @@
                         </div>
                     </div>
                 </form> -->
-            <!-- User -->
-            {{-- <ul class="navbar-nav align-items-center d-none d-md-flex">
+    <!-- User -->
+    {{-- <ul class="navbar-nav align-items-center d-none d-md-flex">
                 <li class="nav-item dropdown">
                     <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
@@ -61,7 +61,7 @@
                     </div>
                 </li>
             </ul> --}}
-        {{-- </div>
+    {{-- </div>
     </nav> --}}
     <!-- Header -->
     <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="background-color: #ffc107;">
@@ -89,13 +89,18 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-3 order-lg-2">
                             <div class="card-profile-image">
-                                <a href="#">
-                                    <img src="{{ asset('img/'.Auth::user()->foto) }}"
-                                        class="rounded-circle">
-                                </a>
+                               
+                                    <img src="{{ asset('img/'.Auth::user()->foto) }}" class="rounded-circle">
+                               
                             </div>
                         </div>
                     </div><br>
+                    {{-- <form action="/updateee/{{ Auth::user()->id }}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                                    <input type="file" id="fileInput" name="foto" style="display:none">
+                                    <button onClick="choseFile()" class="fa fa-upload"></button><br>
+                                    <input type="submit" class="btn btn-info">
+                                    </form> --}}
                     <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
                         {{-- <div class="d-flex justify-content-between">
                             <a href="login.html" class="btn btn-sm btn-info mr-4">Keluar</a>
@@ -151,6 +156,7 @@
                             </div>
                             <div class="col-4 text-right">
                                 <a href="editprofile" class="btn btn-sm btn-primary">Edit Akun</a>
+                                <a href="logout" class="btn btn-sm btn-danger">Keluar</a>
                             </div>
                         </div>
                     </div>
@@ -169,10 +175,12 @@
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group focused">
-                                            <label class="form-control-label" for="input-tanggallahir">Tanggal Lahir</label>
+                                            <label class="form-control-label" for="input-tanggallahir">Tanggal
+                                                Lahir</label>
                                             <input type="email" id="input-tanggallahir"
                                                 class="form-control form-control-alternative"
-                                                placeholder="Tanggal Lahir" value="{{ Auth::user()->tanggal }}" readonly>
+                                                placeholder="Tanggal Lahir" value="{{ Auth::user()->tanggal }}"
+                                                readonly>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
@@ -180,7 +188,8 @@
                                             <label class="form-control-label" for="input-email">Email</label>
                                             <input type="email" id="input-email"
                                                 class="form-control form-control-alternative"
-                                                placeholder="jesse@example.com" value="{{ Auth::user()->email }}" readonly>
+                                                placeholder="jesse@example.com" value="{{ Auth::user()->email }}"
+                                                readonly>
                                         </div>
                                     </div>
                                     {{-- <div class="col-lg-6">
@@ -189,10 +198,10 @@
                                             <input type="email" id="input-password"
                                                 class="form-control form-control-alternative" placeholder="Password"
                                                 value="{{ Auth::user()->password }}" readonly>
-                                        </div>
-                                    </div> --}}
                                 </div>
-                                <!-- <div class="row">
+                            </div> --}}
+                    </div>
+                    <!-- <div class="row">
                                         <div class="col-lg-6">
                                             <div class="form-group focused">
                                                 <label class="form-control-label" for="input-first-name">First
@@ -212,29 +221,29 @@
                                             </div>
                                         </div>
                                     </div> -->
+                </div>
+                <hr class="my-4">
+                <!-- Address -->
+                <h6 class="heading-small text-muted mb-4">Informasi Kontak</h6>
+                <div class="pl-lg-4">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group focused">
+                                <label class="form-control-label" for="input-address">Alamat</label>
+                                <input id="input-address" class="form-control form-control-alternative"
+                                    placeholder="Home Address" value="{{ Auth::user()->alamat }}" type="email" readonly>
                             </div>
-                            <hr class="my-4">
-                            <!-- Address -->
-                            <h6 class="heading-small text-muted mb-4">Informasi Kontak</h6>
-                            <div class="pl-lg-4">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group focused">
-                                            <label class="form-control-label" for="input-address">Alamat</label>
-                                            <input id="input-address" class="form-control form-control-alternative"
-                                                placeholder="Home Address" value="{{ Auth::user()->alamat }}" type="email" readonly>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group focused">
-                                            <label class="form-control-label" for="input-nomortelepon">Nomor
-                                                Telepon</label>
-                                            <input id="input-nomortelepon" class="form-control form-control-alternative"
-                                                placeholder="Nomor Telepon" value="{{ Auth::user()->no }}" type="email" readonly>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- <div class="row">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group focused">
+                                <label class="form-control-label" for="input-nomortelepon">Nomor
+                                    Telepon</label>
+                                <input id="input-nomortelepon" class="form-control form-control-alternative"
+                                    placeholder="Nomor Telepon" value="{{ Auth::user()->no }}" type="email" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="row">
                                         <div class="col-lg-6">
                                             <div class="form-group focused">
                                                 <label class="form-control-label" for="input-city">City</label>
@@ -261,10 +270,10 @@
                                             </div>
                                         </div>
                                     </div> -->
-                            </div>
-                            <!-- <hr class="my-4"> -->
-                            <!-- Description -->
-                            <!-- <h6 class="heading-small text-muted mb-4">About me</h6>
+                </div>
+                <!-- <hr class="my-4"> -->
+                <!-- Description -->
+                <!-- <h6 class="heading-small text-muted mb-4">About me</h6>
                                 <div class="pl-lg-4">
                                     <div class="form-group focused">
                                         <label>About Me</label>
@@ -272,11 +281,11 @@
                                             placeholder="A few words about you ...">A beautiful Dashboard for Bootstrap 4. It is Free and Open Source.</textarea>
                                     </div>
                                 </div> -->
-                        </form>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
+</div>
+</div>
 </div>
 @endsection

@@ -61,7 +61,8 @@
                     </div>
                 </li>
             </ul> --}}
-        {{-- </div>
+            {{--
+        </div>
     </nav> --}}
     <!-- Header -->
     <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="background-color: #ffc107;">
@@ -98,11 +99,11 @@
                     </div>
                     <div class="card-body">
                         <form action="/update/{{ Auth::user()->id }}" method="POST" enctype="multipart/form-data">
-                          @csrf
+                            @csrf
                             <h6 class="heading-small text-muted mb-4">Edit Informasi Pengguna</h6>
                             <div class="pl-lg-4">
                                 <div class="row">
-                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
                                         <div class="form-group focused">
                                             <label class="form-control-label" for="input-username">Nama</label>
                                             <input name="nama" type="text" id="input-username"
@@ -112,7 +113,16 @@
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group focused">
-                                            <label class="form-control-label" for="input-tanggallahir">Tanggal Lahir</label>
+                                            <label class="form-control-label" for="input-foto">Foto Profil</label>
+                                            <input name="foto" type="file" id="input-foto"
+                                                class="form-control form-control-alternative" placeholder="Foto Profil"
+                                                value="{{ Auth::user()->foto }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group focused">
+                                            <label class="form-control-label" for="input-tanggallahir">Tanggal
+                                                Lahir</label>
                                             <input name="tanggal" type="date" id="input-tanggallahir"
                                                 class="form-control form-control-alternative"
                                                 placeholder="Tanggal Lahir" value="{{ Auth::user()->tanggal }}">
@@ -164,45 +174,52 @@
                                     <div class="col-md-6">
                                         <div class="form-group focused">
                                             <label class="form-control-label" for="input-address">Alamat</label>
-                                            <input name="alamat" id="input-address" class="form-control form-control-alternative"
-                                                placeholder="Home Address" value="{{ Auth::user()->alamat }}" type="text">
+                                            <input name="alamat" id="input-address"
+                                                class="form-control form-control-alternative" placeholder="Home Address"
+                                                value="{{ Auth::user()->alamat }}" type="text">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group focused">
                                             <label class="form-control-label" for="input-nomortelepon">Nomor
                                                 Telepon</label>
-                                            <input name="no" id="input-nomortelepon" class="form-control form-control-alternative"
+                                            <input name="no" id="input-nomortelepon"
+                                                class="form-control form-control-alternative"
                                                 placeholder="Nomor Telepon" value="{{ Auth::user()->no }}" type="text">
                                         </div>
                                     </div>
                                 </div>
+                                @if ($errors->has('foto'))
+                                <div class="alert alert-danger" role="alert">
+                                    {{ $errors->first('foto') }}
+                                </div>
+                                @endif
                                 @if ($errors->has('nama'))
-                                    <div class="alert alert-danger" role="alert">
-                                      {{ $errors->first('nama') }}
-                                    </div>
+                                <div class="alert alert-danger" role="alert">
+                                    {{ $errors->first('nama') }}
+                                </div>
                                 @endif
                                 @if ($errors->has('tanggal'))
-                                    <div class="alert alert-danger" role="alert">
-                                      {{ $errors->first('tanggal') }}
-                                    </div>
+                                <div class="alert alert-danger" role="alert">
+                                    {{ $errors->first('tanggal') }}
+                                </div>
                                 @endif
                                 @if ($errors->has('email'))
-                                    <div class="alert alert-danger" role="alert">
-                                      {{ $errors->first('email') }}
-                                    </div>
+                                <div class="alert alert-danger" role="alert">
+                                    {{ $errors->first('email') }}
+                                </div>
                                 @endif
                                 @if ($errors->has('alamat'))
-                                    <div class="alert alert-danger" role="alert">
-                                      {{ $errors->first('alamat') }}
-                                    </div>
+                                <div class="alert alert-danger" role="alert">
+                                    {{ $errors->first('alamat') }}
+                                </div>
                                 @endif
                                 @if ($errors->has('no'))
-                                    <div class="alert alert-danger" role="alert">
-                                      {{ $errors->first('no') }}
-                                    </div>
+                                <div class="alert alert-danger" role="alert">
+                                    {{ $errors->first('no') }}
+                                </div>
                                 @endif
-                                <button class="btn btn-primary" type="submit">Simpan    </button>
+                                <button class="btn btn-primary" type="submit">Simpan </button>
                                 <a href="{{ url('profile') }}" class="btn btn-close">Kembali</a>
                                 <!-- <div class="row">
                                         <div class="col-lg-6">
@@ -246,7 +263,8 @@
                     </div>
                 </div>
             </div>
-        {{-- </div> --}}
+            {{--
+        </div> --}}
     </div>
 </div>
 @endsection
