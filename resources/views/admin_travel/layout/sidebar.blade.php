@@ -129,7 +129,7 @@
                                       </form>   
                                   </div>
                               </li>
-                              <li class="nav-item nav-icon dropdown">
+                              {{-- <li class="nav-item nav-icon dropdown">
                                   <a href="#" class="search-toggle dropdown-toggle" id="dropdownMenuButton2"
                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
@@ -205,7 +205,7 @@
                                           </div>
                                       </div>
                                   </div>
-                              </li>
+                              </li> --}}
                               <li class="nav-item nav-icon dropdown">
                                   <a href="#" class="search-toggle dropdown-toggle" id="dropdownMenuButton"
                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
