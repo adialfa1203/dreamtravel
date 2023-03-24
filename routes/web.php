@@ -139,6 +139,10 @@ Route::middleware('auth')->group(function() {
         //tambah data ??
         Route::get('tambah_data', [TambahDataController::class, 'index']);
         Route::post('tambah_data', [TambahDataController::class, 'insert_data_to_two_tables']);
+        //faq
+        Route::get('faq', [FAQController::class, 'faq'])->name('faq');
+        Route::post('createfaq', [FAQController::class, 'createfaq'])->name('createfaq');
+        Route::get('faqs', [FAQController::class, 'faqs']);
     });
 });
 
