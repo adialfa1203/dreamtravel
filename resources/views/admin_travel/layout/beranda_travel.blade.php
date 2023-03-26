@@ -98,7 +98,7 @@
         yAxis: {
             min: 0,
             title: {
-                text: 'Tujuan'
+                text: 'Tujuan Paling Diminati'
             }
         },
         tooltip: {

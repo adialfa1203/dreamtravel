@@ -61,6 +61,10 @@ Route::middleware('auth')->group(function() {
     //logout
     Route::get('logout', [AuthController::class,'logout']);
     
+    //faq
+    Route::get('faq', [FAQController::class, 'faq'])->name('faq');
+    Route::post('createfaq', [FAQController::class, 'createfaq'])->name('createfaq');
+    Route::get('faqs', [FAQController::class, 'faqs']);
     // profile
 
     Route::get('profile', [PenggunaWebController::class, 'indexprofile'])->name('profile');
