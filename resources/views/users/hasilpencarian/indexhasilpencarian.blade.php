@@ -89,7 +89,7 @@
     <div class="row">
       <div class="col-md-6">
         <!-- Recomended item-->
-        <div class="card">
+        {{-- <div class="card"> --}}
           <div class="col-md-12">
             <div class="recom-item border faq-title" data-toggle="collapse" data-target="#faqCollapse-1"
               data-aria-expanded="true" data-aria-controls="faqCollapse-1">
@@ -155,10 +155,12 @@
             </div>
           </div>
 
-        </div><br>
+          {{--
+        </div> --}}
+        <br>
         <!-- ! Recomended item-->
         <!-- Recomended item-->
-        <div class="card">
+        {{-- <div class="card"> --}}
           <div class="col-md-12">
             <div class="recom-item border faq-title" data-toggle="collapse" data-target="#faqCollapse-2"
               data-aria-expanded="true" data-aria-controls="faqCollapse-2">
@@ -177,7 +179,7 @@
                   <h5>Rp. 100.000,00 / Orang</h5>
                 </div>
                 <a class="recom-button faq-title" data-toggle="collapse" data-target="#faqCollapse-2"
-                  data-aria-expanded="true" data-aria-controls="faqCollapse-2">Selengkapnya</a><a href="pesan.html"
+                  data-aria-expanded="true" data-aria-controls="faqCollapse-2">Detail</a><a href="pesan.html"
                   class="cws-button small alt">Pesan
                   Sekarang</a>
                 <!-- <div class="action font-2">20%</div> -->
@@ -226,10 +228,12 @@
             </div>
           </div>
 
-        </div><br>
+          {{--
+        </div> --}}
+        <br>
         <!-- ! Recomended item-->
         <!-- Recomended item-->
-        <div class="card">
+        {{-- <div class="card"> --}}
           <div class="col-md-12">
             <div class="recom-item border faq-title" data-toggle="collapse" data-target="#faqCollapse-3"
               data-aria-expanded="true" data-aria-controls="faqCollapse-3">
@@ -248,7 +252,7 @@
                   <h5>Rp. 100.000,00 / Orang</h5>
                 </div>
                 <a class="recom-button faq-title" data-toggle="collapse" data-target="#faqCollapse-3"
-                  data-aria-expanded="true" data-aria-controls="faqCollapse-3">Selengkapnya</a><a href="pesan.html"
+                  data-aria-expanded="true" data-aria-controls="faqCollapse-3">Detail</a><a href="pesan.html"
                   class="cws-button small alt">Pesan
                   Sekarang</a>
                 <!-- <div class="action font-2">20%</div> -->
@@ -297,12 +301,13 @@
             </div>
           </div>
 
-        </div>
+          {{--
+        </div> --}}
       </div>
       <!-- ! Recomended item-->
       <!-- Recomended item-->
       <div class="col-md-6">
-        <div class="card">
+        {{-- <div class="card"> --}}
           <div class="col-md-12">
             <div class="recom-item border faq-title" data-toggle="collapse" data-target="#faqCollapse-4"
               data-aria-expanded="true" data-aria-controls="faqCollapse-4">
@@ -321,7 +326,7 @@
                   <h5>Rp. 100.000,00 / Orang</h5>
                 </div>
                 <a class="recom-button faq-title" data-toggle="collapse" data-target="#faqCollapse-4"
-                  data-aria-expanded="true" data-aria-controls="faqCollapse-4">Selengkapnya</a><a href="pesan.html"
+                  data-aria-expanded="true" data-aria-controls="faqCollapse-4">Detail</a><a href="pesan.html"
                   class="cws-button small alt">Pesan
                   Sekarang</a>
                 <!-- <div class="action font-2">20%</div> -->
@@ -365,10 +370,12 @@
             </div>
           </div>
 
-        </div><br>
+          {{--
+        </div> --}}
+        <br>
         <!-- ! Recomended item-->
         <!-- Recomended item-->
-        <div class="card">
+        {{-- <div class="card"> --}}
           <div class="col-md-12">
             <div class="recom-item border faq-title" data-toggle="collapse" data-target="#faqCollapse-5"
               data-aria-expanded="true" data-aria-controls="faqCollapse-5">
@@ -387,7 +394,7 @@
                   <h5>Rp. 100.000,00 / Orang</h5>
                 </div>
                 <a class="recom-button faq-title" data-toggle="collapse" data-target="#faqCollapse-5"
-                  data-aria-expanded="true" data-aria-controls="faqCollapse-5">Selengkapnya</a><a href="pesan.html"
+                  data-aria-expanded="true" data-aria-controls="faqCollapse-5">Detail</a><a href="pesan.html"
                   class="cws-button small alt">Pesan
                   Sekarang</a>
                 <!-- <div class="action font-2">20%</div> -->
@@ -436,10 +443,12 @@
             </div>
           </div>
 
-        </div><br>
+          {{--
+        </div> --}}
+        <br>
         <!-- ! Recomended item-->
         <!-- Recomended item-->
-        <div class="card">
+        {{-- <div class="card"> --}}
           <div class="col-md-12">
             <div class="recom-item border faq-title" data-toggle="collapse" data-target="#faqCollapse-6"
               data-aria-expanded="true" data-aria-controls="faqCollapse-6">
@@ -458,7 +467,7 @@
                   <h5>Rp. 100.000,00 / Orang</h5>
                 </div>
                 <a class="recom-button faq-title" data-toggle="collapse" data-target="#faqCollapse-6"
-                  data-aria-expanded="true" data-aria-controls="faqCollapse-6">Selengkapnya</a><a href="pesan.html"
+                  data-aria-expanded="true" data-aria-controls="faqCollapse-6">Detail</a><a href="pesan.html"
                   class="cws-button small alt">Pesan
                   Sekarang</a>
                 <!-- <div class="action font-2">20%</div> -->
@@ -507,7 +516,8 @@
             </div>
           </div>
 
-        </div>
+          {{--
+        </div> --}}
       </div>
       <!-- ! Recomended item-->
     </div>

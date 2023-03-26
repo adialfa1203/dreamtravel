@@ -30,8 +30,7 @@
         <div class="iq-sidebar  sidebar-default ">
             <div class="iq-sidebar-logo d-flex align-items-center justify-content-between">
                 <a href="index.html" class="header-logo">
-                    <img src="../assets/images/logo.png" class="img-fluid rounded-normal light-logo" alt="logo">
-                    <h5 class="logo-title light-logo ml-3">Dream Travel</h5>
+                    <img src="img/logo-removebg-preview.png" style="width: 150px; height: auto;">
                 </a>
                 <div class="iq-menu-bt-sidebar ml-0">
                     <i class="las la-bars wrapper-menu"></i>

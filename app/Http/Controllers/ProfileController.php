@@ -10,7 +10,6 @@ class ProfileController extends Controller
     {
         $users = Users::all();
         return view('users.profile.indexprofile',compact(['users']));
-         
     }
 
     public function indexdetailkendaraan()

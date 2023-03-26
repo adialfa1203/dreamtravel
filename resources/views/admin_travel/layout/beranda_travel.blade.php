@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-lg-4">
             <div class="card card-transparent card-block card-stretch card-height border-none">
-                 <div class="card-body p-0 mt-lg-2 mt-0">
+                <div class="card-body p-0 mt-lg-2 mt-0">
                     <h3 class="mb-3">Halo {{ Auth::user()->nama }} !</h3>
                     <p class="mb-0 mr-4">Selamat Bekerja !</p>
                 </div>
@@ -13,13 +13,14 @@
         </div>
         <div class="col-lg-8">
             <div class="row">
-                
+
                 <div class="col-lg-6 col-md-6">
                     <div class="card card-block card-stretch card-height">
                         <div class="card-body">
                             <div class="d-flex align-items-center mb-4 card-total-sale">
                                 <div class="icon iq-icon-box-2 bg-danger-light">
-                                    <img src="{{  asset ('E5 (1)\E5/templates.iqonic.design/lite/posdash/html/assets/images/product/2.png') }}" class="img-fluid" alt="image">
+                                    <img src="{{  asset ('E5 (1)\E5/templates.iqonic.design/lite/posdash/html/assets/images/product/2.png') }}"
+                                        class="img-fluid" alt="image">
                                 </div>
                                 <div>
                                     <p class="mb-2">Pesanan</p>
@@ -38,7 +39,8 @@
                         <div class="card-body">
                             <div class="d-flex align-items-center mb-4 card-total-sale">
                                 <div class="icon iq-icon-box-2 bg-success-light">
-                                    <img src="{{  asset ('E5 (1)\E5/templates.iqonic.design/lite/posdash/html/assets/images/product/3.png') }}" class="img-fluid" alt="image">
+                                    <img src="{{  asset ('E5 (1)\E5/templates.iqonic.design/lite/posdash/html/assets/images/product/3.png') }}"
+                                        class="img-fluid" alt="image">
                                 </div>
                                 <div>
                                     <p class="mb-2">Travel</p>
@@ -54,22 +56,22 @@
                 </div>
             </div>
         </div>
-                   
-        
-        <div class="col-lg-12">  
+
+
+        <div class="col-lg-12">
             <div class="card card-block card-stretch card-height">
                 <div class="card-header d-flex justify-content-between">
                     <div class="header-title">
                         <h4 class="card-title">Ringkasan Tujuan</h4>
-                    </div>                        
+                    </div>
                     <div class="card-header-toolbar d-flex align-items-center">
                         <div class="dropdown">
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div> 
-        <div class="card card-block card-stretch card-height">
-            <div id="penjualan"></div>
-        </div>
+                <div class="card card-block card-stretch card-height">
+                    <div id="penjualan"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -80,7 +82,7 @@
 @section('footer')
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script>
-        Highcharts.chart('penjualan', {
+    Highcharts.chart('penjualan', {
         chart: {
             type: 'column'
         },
@@ -131,5 +133,5 @@
 
         }]
     });
-    </script>
+</script>
 @endsection

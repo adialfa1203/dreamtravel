@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="{{ asset ('css/style.css')}}">
 </head>
+
 <body>
     <div class="container">
         <div class="tab_box">
@@ -19,19 +21,23 @@
         <div class="content_box">
             <div class="content active">
                 <h2>Home</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, aperiam consectetur recusandae iure commodi eum temporibus laborum facere velit porro.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, aperiam consectetur recusandae iure
+                    commodi eum temporibus laborum facere velit porro.</p>
             </div>
             <div class="content">
                 <h2>About</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, aperiam consectetur recusandae iure commodi eum temporibus laborum facere velit porro.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, aperiam consectetur recusandae iure
+                    commodi eum temporibus laborum facere velit porro.</p>
             </div>
             <div class="content">
                 <h2>Blogs</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, aperiam consectetur recusandae iure commodi eum temporibus laborum facere velit porro.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, aperiam consectetur recusandae iure
+                    commodi eum temporibus laborum facere velit porro.</p>
             </div>
             <div class="content">
                 <h2>Contact Us</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, aperiam consectetur recusandae iure commodi eum temporibus laborum facere velit porro.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, aperiam consectetur recusandae iure
+                    commodi eum temporibus laborum facere velit porro.</p>
             </div>
         </div>
     </div>
@@ -53,4 +59,5 @@
         })
     </script>
 </body>
+
 </html>
